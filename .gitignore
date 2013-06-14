@@ -16,3 +16,10 @@ tmp
 .yardoc
 _yardoc
 doc/
+
+*~
+site/output/*
+site/tmp/*
+.DS_STORE
+site/content/robots.txt
+*.pyc
