@@ -1,0 +1,47 @@
+<table class="table-pricing"> 
+<% pricing[:pricing_table].each_with_index do |feature, i_feature| %>
+  <% if i_feature == 0 %>
+  <thead>
+    <tr>
+      <td></td>
+      <th class="feature-section"><%=feature[:title]%></th>
+      <% feature[:editions].each_with_index do |edition, i_edition| %>
+        <th class="edition <%=pricing[:edition_classes][i_edition]%>"><div><%=edition%></div></th>
+      <% end %>
+    </tr>
+  </thead>
+  <% else %>
+  <tbody<% if feature[:details] %> class="feature-details"<% end %>>
+    <tr>
+      <% if feature[:details] %>
+        <th class="feature-section" rowspan="<%=feature[:details].length%>"><div><span><%=feature[:title]%></span></div></th>
+        <% feature[:details].each_with_index do |detail, i_detail| %>
+          <% if i_detail != 0 %>
+          </tr><tr>
+          <% end %>
+	        <%= render '_table-pricing-editions', 
+          					:feature => detail[:title],
+          					:editions => detail[:editions],
+          					:edition_classes => pricing[:edition_classes] %>
+        <% end %>
+      <% else %>
+        <td></td>
+        <%= render '_table-pricing-editions', 
+        					:feature => feature[:title],
+        					:editions => feature[:editions],
+        					:edition_classes => pricing[:edition_classes] %>
+      <% end %>
+    </tr>
+  </tbody>
+  <% end %>
+<% end %>
+  <tfoot>
+    <tr>
+      <td></td>
+      <td></td>
+      <% pricing[:pricing_table][0][:editions].each_with_index do |edition_type, i_et| %>
+      <th class="edition <%=pricing[:edition_classes][i_et]%>"><%=edition_type%></th>
+      <% end %>
+    </tr>
+  </tfoot>
+</table>

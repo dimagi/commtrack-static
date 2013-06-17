@@ -1,0 +1,12 @@
+<th class="feature"><%=@feature%></th>
+<% @editions.each_with_index do |edition, i_edition| %>
+  <td class="edition <%=@edition_classes[i_edition]%>">
+    <% if edition == true %>
+    <i class="icon-ok"></i>
+    <% elsif edition == false || edition == nil %>
+    <i class="icon-minus"></i>
+    <% else %>
+    <%=edition%>
+    <% end %>
+  </td>
+<% end %>

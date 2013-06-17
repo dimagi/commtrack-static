@@ -1,0 +1,40 @@
+.ui-widget-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,.5);
+}
+
+.ui-dialog {
+	background-color: @backgroundColor;
+	.rounded(10px);
+	.box-shadow(0 1px 6px rgba(0, 0, 0, 0.8));
+	&:after {
+		.clear-floats();
+	}
+}
+
+.ui-dialog-titlebar {
+	.blue-button();
+	.rounded-top(10px);
+	padding: .5em .7em;
+	color: #ffffff;
+	.corben-family();
+	font-size: 25px;
+}
+
+.ui-dialog-titlebar-close {
+	text-decoration: none;
+	color: #ffffff;
+	display: block;
+	font-size: 25px;
+	padding: .1em .3em;
+	margin-top: -2px;
+	float: right;
+	.lato-family();
+	.rounded(10px);
+	font-weight: bold;
+	&:hover {
+		background-color: darken(@commCareBlue, 10);
+	}
+}

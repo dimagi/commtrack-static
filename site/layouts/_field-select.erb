@@ -1,0 +1,13 @@
+<div class="control-group">
+		<label class="control-label" for="<%=@slug%>"><% if @is_required %>*<%end%><%=@name%></label>
+		<div class="controls">
+		  <select class="input-xlarge" id="<%=@slug%>" name="<%=@slug%>" title="<%=@name%>">
+		  <% if @field[:default_option] %>
+		    <option value=""><%=@field[:default_option]%></option>
+		  <% end %>
+		  <% @field[:options].each do |op_slug, option| %>
+		    <option value="<%=op_slug%>"><%=option%></option>
+		  <% end %>
+		  </select>
+		</div>
+</div>

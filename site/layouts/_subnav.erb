@@ -1,0 +1,11 @@
+<% @nav_items.each_with_index do |nav, i| %>
+	<li id="nav-<%= nav[:slug] %>"<% if i == 0 %> class="selected"<% end %>>
+		<a href="<%= @path + "#" + nav[:slug] %>" data-order="<%=i+1%>">
+			<img src="<%= @image_path + nav[:section_id] %>.png" alt="<%=nav[:section_id]%>" />
+			<span>
+				<strong><%= html_escape(nav[:short_title]) %></strong>
+				<%= html_escape(nav[:short_desc]) %>
+			</span>
+		</a>
+	</li>
+<% end %>

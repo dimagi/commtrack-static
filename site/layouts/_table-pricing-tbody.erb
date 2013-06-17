@@ -1,0 +1,11 @@
+<tbody>
+	<tr><th colspan="4"><div><%=html_escape(@title)%></div></th></tr>
+	<% @features.each_with_index do |feature, i| %>
+	<tr>
+		<th><div><%= html_escape(feature).sub('((t))', '<span>(' + @item[:timeline] + ')</span>') %></div></th>
+		<td><%= table_text(@free_options.at(i)) %></td>
+		<td><%= table_text(@basic_options.at(i)) %></td>
+		<td><%= table_text(@full_options.at(i)) %></td>
+	</tr>
+	<% end %>
+</tbody>

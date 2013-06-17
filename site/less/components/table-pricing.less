@@ -1,0 +1,197 @@
+.table-pricing tbody {
+  postion: relative;
+  th {
+      text-align: left;
+      font-weight: normal;
+      font-size: @baseFontSize;
+  }
+  td {
+    font-size: @baseFontSize;
+    padding: .5em 1em;
+  }  
+
+  @separatorHeight: 35px;
+  @separatorSpace: @separatorHeight+10;
+  
+  &.feature-details tr:first-child {
+    th, td {
+      padding-top: @separatorSpace;
+    }
+  }
+  
+  .feature-section {
+    color: @pricingEnterpriseColor;     
+    vertical-align: top;
+    
+    > div {
+      position: relative;
+      writing-mode: tb-rl;
+      > span {
+        font-size: 20px;
+        display: block;
+        position:absolute;
+        left: -10px;
+        top: -@separatorSpace;
+        padding-left: 10px;
+        width: @pageWidth - 10;
+        line-height: @separatorHeight;
+        height: @separatorHeight;
+        background-color: @white;
+        .box-shadow(0 0 4px rgba(0, 0, 0, 0.3));
+      }
+    }
+  }
+  
+  &.feature-details .feature {
+    padding: 10px 15px;
+  }
+  
+  .feature, 
+  td:first-child, 
+  .feature-section {
+    background-color: lighten(@pricingEnterpriseBackgroundColor, 5);
+  }
+  
+  &:first-of-type .feature,
+  &:first-of-type td:first-child,
+  tr:nth-child(even) .feature {
+    background-color: lighten(@pricingEnterpriseBackgroundColor, 8);
+  }
+
+  .edition {
+    text-align: center;
+    .icon-minus {
+      .opacity(20);
+    }
+  }
+  .edition-community {
+    color: @pricingCommunityTextColor;
+    background-color: @pricingCommunityBackgroundColor;
+  }
+  
+  .edition-standard {
+    color: @pricingStandardTextColor;
+    background-color: @pricingStandardBackgroundColor;
+  }
+  
+  .edition-pro {
+    color: @pricingProTextColor;
+    background-color: @pricingProBackgroundColor;
+  }
+  
+  .edition-advanced {
+    color: @pricingAdvancedTextColor;
+    background-color: @pricingAdvancedBackgroundColor;
+  }
+  
+  .edition-enterprise {
+    color: @pricingEnterpriseTextColor;
+    background-color: @pricingEnterpriseBackgroundColor;
+  }
+  
+  &:first-of-type,
+  tr:nth-child(even) {
+    @tLevel: 3;
+    .edition-community { background-color: lighten(@pricingCommunityBackgroundColor, @tLevel); }
+    .edition-standard { background-color: lighten(@pricingStandardBackgroundColor, @tLevel); }
+    .edition-pro { background-color: lighten(@pricingProBackgroundColor, @tLevel); }
+    .edition-advanced { background-color: lighten(@pricingAdvancedBackgroundColor, @tLevel); }
+    .edition-enterprise { background-color: lighten(@pricingEnterpriseBackgroundColor, @tLevel); }
+  }
+  
+}
+
+.table-pricing thead {
+
+  th, td {
+    background-color: lighten(@pricingEnterpriseBackgroundColor, 5);
+    text-align: left;
+  }
+
+  .edition {
+    padding: 0;
+    
+    > div {
+      z-index: @zindexPricingTableHeader;
+      padding: 25px 0;      
+      width: 130px;
+      .box-shadow(0 0 4px rgba(0, 0, 0, 0.3));
+      color: @white;
+      border: 4px solid @white;
+      .rounded(12px);
+      vertical-align: middle;
+      position: relative;
+      text-align: center;
+      
+      span {
+        display: block;
+        font-size: @baseFontSize*.85;
+      }
+    }
+  }
+  
+  .edition-community div {
+    background-color: @pricingCommunityColor;
+    #gradient > .vertical(lighten(@pricingCommunityColor, 10), @pricingCommunityColor);
+  }
+  
+  .edition-standard div {
+    background-color: @pricingStandardColor;
+    #gradient > .vertical(lighten(@pricingStandardColor, 10), @pricingStandardColor);
+  }
+  
+  .edition-pro div {
+    background-color: @pricingProColor;
+    #gradient > .vertical(lighten(@pricingProColor, 10), @pricingProColor);
+  }
+  
+  .edition-advanced div {
+    background-color: @pricingAdvancedColor;
+    #gradient > .vertical(lighten(@pricingAdvancedColor, 10), @pricingAdvancedColor);
+  }
+  
+  .edition-enterprise div {
+    padding: 16px 0;
+    background-color: @pricingEnterpriseColor;
+    #gradient > .vertical(lighten(@pricingEnterpriseColor, 10), @pricingEnterpriseColor);
+  }
+  
+}
+
+.table-pricing tfoot {
+
+  .edition {
+    padding: @gridGutterWidth 0;
+  }
+
+  .edition > span { display: none; }
+  
+  @tLevel: 15;
+  
+  .edition-community {
+    color: lighten(@pricingCommunityBackgroundColor, @tLevel);
+    background-color: @pricingCommunityBackgroundColor;
+  }
+  
+  .edition-standard {
+    color: lighten(@pricingStandardBackgroundColor, @tLevel);
+    background-color: @pricingStandardBackgroundColor;
+  }
+  
+  .edition-pro {
+    color: lighten(@pricingProBackgroundColor, @tLevel);
+    background-color: @pricingProBackgroundColor;
+  }
+  
+  .edition-advanced {
+    color: lighten(@pricingAdvancedBackgroundColor, @tLevel);
+    background-color: @pricingAdvancedBackgroundColor;
+  }
+  
+  .edition-enterprise {
+    color: lighten(@pricingEnterpriseBackgroundColor, @tLevel);
+    background-color: @pricingEnterpriseBackgroundColor;
+  }
+  
+}
+

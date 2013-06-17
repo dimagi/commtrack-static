@@ -1,0 +1,13 @@
+slug: support
+title: Resources & Support
+short_title: "Support"
+
+locale:
+  fr:
+    slug: "aide"
+    title: "Ressources & Aide"
+    short_title: "Aide"
+  es:
+    slug: "support"
+    title: "Resources & Support"
+    short_title: "Support"

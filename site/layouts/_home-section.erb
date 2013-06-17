@@ -1,0 +1,12 @@
+<hr />
+<section id="<%=@item[:section_id]%>">
+	<%= @item.compiled_content %>
+	<% if @item[:texts] %>
+		<% @item[:texts].each_with_index do |text, i| %>
+			<div class="screenshot">
+				<h2><a href="<%= @item[:links][i] %>"><%= html_escape(text) %>.</a></h2>
+				<p><a href="<%= @item[:links][i] %>"><img src="<%= @item[:images][i] %>" alt="" /></a></p>
+			</div>
+		<% end %>
+	<% end %>
+</section>

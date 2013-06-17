@@ -1,0 +1,32 @@
+slug: services
+sections: ['pricing_table']
+
+title:    'Services'
+short_title: "Services"
+heading:  'Discover CommCare Support & Services.'
+desc:     "Our field managers & analysts are here to help."
+
+compare_button: "Compare Plans"
+compare_heading: "Compare CommCare Plans"
+
+locale:
+  fr:
+    slug: services
+    
+    title:    'Services'
+    short_title: "Services"
+    heading:  'Discover CommCare Support & Services.'
+    desc:     "Our field managers & analysts are here to help."
+    
+    compare_button: "Compare Plans"
+    compare_heading: "Compare CommCare Plans"
+  es:
+    slug: services
+    
+    title:    'Services'
+    short_title: "Services"
+    heading:  'Discover CommCare Support & Services.'
+    desc:     "Our field managers & analysts are here to help."
+    
+    compare_button: "Compare Plans"
+    compare_heading: "Compare CommCare Plans"

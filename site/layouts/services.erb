@@ -1,0 +1,22 @@
+<% pricing_table = get_sections(@item, ["pricing_table"]) %>
+
+<article id="services">
+  <hgroup>
+    <div class="row">
+      <div class="span4" style="text-align: center;">
+        <img src="/images/services/services-graphic.png" alt="Our lovely field staff." />
+      </div>
+      <div class="span8">
+        <h1><%= @item[:heading] %></h1>
+        <h2><%= html_escape(@item[:desc]) %></h2>
+      </div>
+    </div>    
+  </hgroup>
+  <section id="compare-plans">
+  <%= pricing_table[0].compiled_content %>
+  <%= render '_table-pricing', :pricing => pricing_table[0] %>
+  </section>
+  <section>	
+  <%= yield %>
+  </section>
+</article>

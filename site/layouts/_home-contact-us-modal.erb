@@ -1,0 +1,86 @@
+<% form = @item[:contact_us_form] %>
+<div id="contact-us-form" title="<%=form[:title]%>">
+	<form class="form form-horizontal" action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+
+		<input type=hidden name="oid" value="00Db0000000HSD4">
+		
+		<!-- This needs to change to a page that says thanks for your submission -->
+		<input type=hidden name="retURL" value="http://commcarehq.org">
+		
+		<!--  ----------------------------------------------------------------------  -->
+		<!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+		<!--  these lines if you wish to test in debug mode.                          -->
+		<!--  <input type="hidden" name="debug" value=1>     						  -->                         
+		  <input type="hidden" name="debugEmail" value="nnestle@dimagi.com">      
+		<!--  ----------------------------------------------------------------------  -->
+		  
+	  <% form[:required_fields].each do |slug, field| %>
+	    <%= render '_field-text', 
+				:slug => slug, 
+				:name =>  field,
+				:is_textarea => false,
+				:is_required => true
+			 %>
+	  <% end %>
+	  
+	  <% form[:optional_fields].each do |slug, field| %>
+	    <%= render '_field-text', 
+				:slug => slug, 
+				:name =>  field,
+				:is_textarea => false
+			 %>
+	  <% end %>
+	  
+	  <% form[:required_blob].each do |slug, field| %>
+	    <%= render '_field-text', 
+				:slug => slug, 
+				:name =>  field,
+				:is_textarea => true
+			 %>
+	  <% end %>
+	  
+	  <% if form[:select_fields] %>
+  	  <% form[:select_fields].each do |slug, field| %>
+  	    <%= render '_field-select', 
+  				:slug => slug, 
+  				:name =>  field[:name],
+  				:field => field
+  			 %>
+  	  <% end %>
+	  <% end %>
+		
+		<!-- hidden field default Lead Source to "Call to Action" -->
+		<input id="lead_source" name="lead_source" value="Contact Us" type="hidden">
+		
+		<div class="form-actions">
+			<button type="submit" name="submit" <% if use_analytics %><%= track_event('Contact Us Form Submission', 'Contact Us Form Submit Button Click', 'Landing Page') %><% end %>><%=form[:submit_button]%></button>
+		</div>
+	</form>
+		    <bind nodeset="encounter_date" type="date" required="true()" jr:preload="date" jr:preloadParams="today" />
+		    <bind nodeset="encounter_time"  type="time" />
+		    <bind nodeset="prev_encounter_available" required="true()"  relevant="../encounter_type = 'review'" />
+		    <bind nodeset="prev_encounter_date" type="date" required="true()" relevant="../prev_encounter_available = 'y'" jr:preload="date" jr:preloadParams="today" />
+</div>
+
+
+<script type="text/javascript">
+	$(function () {
+		var contactUsModal = $("#contact-us-form");
+		$('.button.contact-us').click(function (e) {
+			contactUsModal.dialog('open');
+			contactUsModal.css('height', '531px');
+			e.preventDefault();
+		});
+	
+		contactUsModal.dialog({
+			height: 768,
+			minHeight: 768,
+			width: 520,
+			minWidth: 520,
+			modal: true,
+			closeText: '×',
+			autoOpen: false
+		});	
+		
+	});
+</script>

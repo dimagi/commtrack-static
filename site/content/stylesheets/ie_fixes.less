@@ -1,0 +1,178 @@
+/**
+** Jeeze, guys. Fix Internet Explorer already. There are standards now, ya know.
+**/
+
+@import '../../less/vars';
+@import '../../../twitter-bootstrap/less/variables';
+@import '../../../twitter-bootstrap/less/mixins';
+@import '../../less/mixins';
+.hgroup-fix() {
+	background-color: desaturate(lighten(@commCareBlue, 60%), 40);
+}
+
+article {
+  .clearfix;
+
+	&#landing-page,
+	&#users,
+	&#support {
+		hgroup {
+			.hgroup-fix();
+		}
+	}
+	&#tour,
+	&#plans {
+		&:before {
+			.hgroup-fix();
+		}
+	}
+	
+	&#tour:before {
+    height: 282px;
+  }
+	
+  &#plans .contain section#active_data {
+    float: right;
+    margin-left: 20px;
+  }
+  &#plans .contain section#direct_support {
+    
+  }
+}
+
+.lang-fr #users {
+  hgroup {
+    h1 {
+      font-size: 2.2em;
+    }
+  }
+}
+
+#landing-page hgroup {
+  filter: none;
+  margin-bottom: 90px;
+}
+
+article#landing-page section#about,
+.lang-fr article#landing-page section#about {
+  div {
+    display: none;
+  }
+  ul {
+    margin-bottom: 0;
+    height: auto;
+  }
+}
+
+#landing-page hgroup ul {
+  z-index: 999;
+}
+
+.lang-fr #tour:before {
+  height: 349px;
+}
+
+article#users section.users-of-commcare ul {
+  width: 722px;
+}
+
+article#users section.users-of-commcare ul li span {
+  &.grameen {
+    width: 607px;
+  }
+  &.itido {
+    width: 592px;
+  }
+  &.phfi {
+    width: 628px;
+  }
+}
+
+.lt-ie8 {
+  nav.language-bar {
+    > ul > li {
+      float: right;
+    }
+  }
+  header {
+    nav {
+      margin-top: -54px;
+    }
+  }
+  article {
+    margin-bottom: @footerHeight;
+  }
+  footer {
+    clear: both;
+    height: @footerHeight + 50;
+  }
+  
+  article#users section.users-of-commcare {
+    img.commcare-map {
+      position: static;
+      display: block;
+      margin: 0 auto;
+    }
+    ul {
+      width: auto !important;
+    }
+    ul li {
+      float: left;
+      height: 110px;
+      span {
+        float: none;
+        width: auto !important;
+      }
+    }
+    h2 {
+      clear: both;
+    }
+  }
+  
+  article#users section.summaries {
+    ul li {
+      float: left !important;
+    }
+  }
+  article#support ul li {
+    float: left;
+  }
+  article#support h3 {
+    clear: both;
+  }
+  article#plans ul li {
+    &.tier-1,
+    &.tier-2,
+    &.tier-3 {
+      float: left;
+    }
+  }
+  article#plans #compare-plans {
+    ul li {
+      float: left;
+    }
+    table {
+      clear: both;
+    }
+  }
+  #poc {
+    img {
+      margin-bottom: 400px;
+    }
+  }
+}
+
+.lt-ie9 {
+  #landing-page section#screenshots div.screenshot img {
+    border: 1px solid @headerBGColor;
+  }
+  #landing-page section#screenshots div.screenshot h2 a {
+    background-color: @headerBGColor;
+  }
+  article#users hgroup h1:before {
+    content: "";
+  }
+  #contact-us-form{
+    border: 1px solid @headerBGColor !important;
+  }
+}

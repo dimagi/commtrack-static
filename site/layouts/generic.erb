@@ -1,0 +1,8 @@
+<article id="<%= @item[:slug] %>">
+	<hgroup>
+		<h1><%= @item[:title] %></h1>
+	</hgroup>
+	<div class="contain">
+		<%= yield %>
+	</div>
+</article>

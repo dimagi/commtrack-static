@@ -1,0 +1,59 @@
+article#plans {
+  @hgroupHeight: 240px;
+	position: relative;
+	hgroup {
+		.centered();
+		position: relative;
+		height: @hgroupHeight;
+		margin-bottom: @gridGutterWidth*2;
+		h1 {
+		  font-size: 38px;
+		  padding-top: 76px;
+		}
+		img {
+  		margin-top: 38px;
+		}
+	}
+	&:before {
+		content: ' ';
+		display: block;
+		position: absolute;
+		.hgroup-commcare();
+		height: @hgroupHeight;
+		width: 100%;
+	}
+}
+
+section#compare-plans {
+	.centered(@colSpace * 2);
+	padding: 0 @gridGutterWidth;
+	h2 {
+		font-size: @baseFontSize*2;
+		text-align: center;
+	}
+}
+
+.lang-fr #plans {
+  hgroup {
+    h1 {
+      font-size: 2.2em;
+    }
+    ul li ul {
+      font-size: 0.9em;
+    }
+    a.button {
+      width: 363px;
+    }
+  }
+  .contain section#software_dev {
+    height: 313px;
+    p:last-child {
+      margin-left: 559px;
+    }
+  }
+}
+
+.lang-en article#plans .contain section#field_support {
+    height: 420px;
+}
+

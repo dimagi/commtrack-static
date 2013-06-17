@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7" lang="<%= @item[:locale] %>"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8" lang="<%= @item[:locale] %>"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9" lang="<%= @item[:locale] %>"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="<%= @item[:locale] %>"> <!--<![endif]-->
+  <head>
+    <meta charset="UTF-8" />
+    <title><% if @item[:title] %><%= @item[:title] %> - <% end %>CommTrack</title>
+        
+    <meta name="description" content="<%= @config[:meta][:description][@item[:locale]] %>">
+    <meta name="author" content="Dimagi, Inc.">
+    <meta name="keywords" content="CommCare, Comm Care, CommCare HQ, CommCare ODK, CommCareHQ, CommCareODK, Dimagi, <%= @config[:meta][:keywords][@item[:locale]] %>">
+    <meta name="viewport" content="width=980,initial-scale=1">
+        
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700|Corben" rel="stylesheet" type="text/css" />
+    <link href="/style/main.css?v=2.3.2" rel="stylesheet" type="text/css" media="screen" />
+    <link rel="icon" type="image/png" href="/images/favicons/favicon.png" />
+    
+    <!--[if IE]>
+    <link rel="shortcut icon" href="/images/favicons/favicon.ico" />
+    <link href="/style/ie_fixes.css" rel="stylesheet" type="text/css" media="screen" />
+    <script type="text/javascript" src="/js/modernizr.custom.79433.js"></script>
+    <![endif]-->
+    
+    <script type="text/javascript" src="/js/jquery-1.8.2.min.js?v=1"></script>
+    <script type="text/javascript" src="/js/jquery.history.js?v=1"></script> 
+    <script type="text/javascript" src="/js/bootstrap.min.js?v=1"></script>
+        
+  </head>
+  <body class="lang-<%=@item[:locale]%>">
+    <nav class="language-bar"><%= render '_language-select' %></nav>
+    <header>
+        <hgroup>
+            <h1>
+              <a href="<%=@config[:data_sources][0][:config][:locale][:availables][@item[:locale]][:home]%>">
+                <img src="/images/commcare-simple-logo.png" alt="CommCare HQ" />
+              </a>
+            </h1>
+            <h2><a href="http://dimagi.com/"><img src="/images/powered-by-dimagi.png" alt="<%=@config[:global_text][:powered_by_dimagi][@item[:locale]] %>" /></a></h2>
+        </hgroup>
+            <nav>
+                <ul>
+                    <%= build_navigation(['home', 'tour', 'users', 'support', ['pricing', ['plans', 'services']]], @item) %>
+                    <li class="extras">
+                      <a class="button" href="/accounts/login/" <% if use_analytics %><%= track_event('Sign In', 'Top Blue Button', 'Nav Bar') %><% end %>><%=@config[:global_text][:sign_in][@item[:locale]] %></a>
+                    </li>
+                </ul>
+            </nav>
+        </header>   
+        <aside class="announcement">
+           <% @config[:announcements].each do |announcement| %>
+           <a href="<%= announcement[@item[:locale]][:link] %>">
+ 	        	<span>
+ 	        		<%= announcement[@item[:locale]][:text] %>
+ 	        	</span>
+         	</a>	
+         	<% end %>
+        </aside>
+	    <div id="content">
+        	<%= yield %>
+        </div>
+        <footer>
+          <div>
+            <% @config[:footer_links][@item[:locale]].each do |section| %>
+            <section>
+              <h2><a href="<%=section[:link]%>"><%=section[:title]%></a></h2>
+              <ul>
+                <% section[:items].each do |footer_link| %>
+                  <li><a href="<%=footer_link[:link]%>"><%=footer_link[:title]%></a></li>
+                <% end %>
+              </ul>
+            </section>
+            <% end %>
+            <a href="/home/" class="left-image"><img src="/images/large-simple-commcare-logo.png" alt="CommCare" /></a>
+            <a href="http://www.dimagi.com/" class="right-image"><img src="/images/dimagi-white-logo.png" alt="Dimagi" /></a>
+            <p><%=@config[:copyright_text][@item[:locale]]%> &copy; <%= Time.now.year %> Dimagi, Inc. | <a id="eula-link" href="/eula">End User License Agreement</a></p>
+          </div>
+        </footer>
+
+    <% ### Scripts %>
+    
+    <% if use_analytics %>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', '<%=google_analytics_account %>']);
+      _gaq.push(['_trackPageview']);
+    
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <% end %> 
+    
+    <% if @item.identifier.include? 'home' %>
+    <script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js?v=1"></script>
+    <% end %>  
+           
+  </body>
+</html>

@@ -1,0 +1,39 @@
+slug: 'workshops/2013/mumbai'
+
+title: "CommCare Workshop in Mumbai"
+section: "2013 CommCare Workshops"
+
+analytics_action: "Mumbai Workshop 2013 Mail Link"
+section_id: "2013workshops"
+
+workshop:
+  link: "/docs/workshops/2013mumbai/CommCare_Workshop_Application.doc"
+  due_date: "June 1st, 2013"
+
+main_logo: [
+  '/images/rfa/div2/commcare-div2.png', 
+  "CommCare DIV2", 
+  "/home/"
+]
+
+sponsor_logos: [
+  [
+    '/images/rfa/div2/dimagi-div2-color.png', 
+    'Dimagi, Inc.', 
+    'http://www.dimagi.com/'
+  ], 
+  [
+    '/images/rfa/div2/usaid-div2.png', 
+    'USAID', 
+    'http://www.usaid.gov/'
+  ]
+]
+
+left_sections: ['workshop_documents', 'resources']
+right_sections: []
+
+locale:
+  fr:
+    slug: 'workshops/2013/mumbai'
+  es:
+    slug: 'workshops/2013/mumbai'

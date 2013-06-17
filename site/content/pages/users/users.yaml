@@ -1,0 +1,24 @@
+slug: "users"
+carousel_start: 1
+
+sections: ["who_uses_commcare", "project_summaries", "commcare_asha", "commcare_tanzania", "commcare_zambia", "commcare_us", "publications"]
+nav_id: users
+
+title: "Case Studies &amp; Publications"
+short_title: "Our Users"
+heading: "CommCare is used by over 50 organizations across the globe."
+tagline: "Currently operating in over 25 countries across four continents."
+
+locale:
+  fr:
+    slug: "utilisateurs"  
+    title: "Études de Cas &amp; Publications"
+    short_title: "Nos utilisateurs"
+    heading: "CommCare est utilisé par plus de 50 organisations issues des quatre coins de la planète."
+    tagline: "CommCare est présent dans 25 pays, sur quatre continents."
+  es:
+    slug: "users"
+    title: "Case Studies &amp; Publications"
+    short_title: "Our Users"
+    heading: "CommCare is used by over 50 organizations across the globe."
+    tagline: "Currently operating in over 25 countries across four continents."

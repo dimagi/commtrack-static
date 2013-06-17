@@ -1,0 +1,11 @@
+<div class="control-group">
+		<label class="control-label" for="<%=@slug%>"><% if @is_required %>*<%end%><%=@name%></label>
+		<div class="controls">
+		  <% if @is_textarea %>
+		    <textarea class="input-xlarge" name="description" style="height:77px" <% if @is_required %>required='Y'<%end%>></textarea>
+		  <% else %>
+			  <input class="input-xlarge" id="<%=@slug%>" maxlength="80" name="<%=@slug%>" size="20" type="text" <% if @is_required %>required='Y'<%end%> />
+			<% end %>
+			
+		</div>
+</div>

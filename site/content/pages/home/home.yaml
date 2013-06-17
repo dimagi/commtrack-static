@@ -1,0 +1,28 @@
+slug: home
+
+title: "CommCare HQ"
+short_title: "Home"
+
+cchq_action:
+  try_button: "Try CommCare"
+  create_account: "Create a free account."
+  take_tour: "Take a quick tour of CommCare HQ."
+  tour_link: "/tour/"
+
+contact:
+  text: "Contact Us"
+  request: "Request more info."
+
+contact_us_form:
+  title: "Contact CommCare"
+  submit_button: "Contact Us"
+  required_fields:
+    first_name: "First Name"
+    last_name: "Last Name"
+    company: "Company"
+    email: "Email Address"
+  required_blob: 
+    description: "What is your interest in CommCare and any specific questions you have?"
+  optional_fields:
+    phone: "Phone Number"
+    00Nb0000002JJXA: "Country"

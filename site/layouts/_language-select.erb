@@ -1,0 +1,5 @@
+<ul>
+  <% @config[:data_sources][0][:config][:locale][:availables].each do |lang, data| %>
+    <li<%if lang == @item[:locale] %> class="selected"<% end %>><a href="<%=get_page_for_locale(@item, lang)%>"><%=data[:name]%></a></li>
+  <% end %>
+</ul>

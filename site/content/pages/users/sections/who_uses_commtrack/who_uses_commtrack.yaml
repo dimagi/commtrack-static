@@ -1,0 +1,19 @@
+section_id: who_uses_commcare
+css_class: users-of-commcare
+
+slug: "who_uses_commcare"
+title: "Who uses CommCare?"
+short_title: "Who Uses CommCare?"
+short_desc: "CommCare is the preferred choice of many organizations around the world."
+
+locale:
+  fr:
+    slug: "qui_utilise_commcare"
+    title: "Qui utilise CommCare?"
+    short_title: "Qui utilise CommCare ?"
+    short_desc: "CommCare constitue le choix préféré de nombreuses organisations dans le monde entier."
+  es:
+    slug: "who_uses_commcare"
+    title: "Who uses CommCare?"
+    short_title: "Who Uses CommCare?"
+    short_desc: "CommCare is the preferred choice of many organizations around the world."
