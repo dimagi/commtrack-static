@@ -23,3 +23,5 @@ site/tmp/*
 .DS_STORE
 site/content/robots.txt
 *.pyc
+
+.idea/
