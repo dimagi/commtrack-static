@@ -1,0 +1,54 @@
+<div class="article-header">
+	<hgroup class="container">
+		<h1><img src="/<%=@config[:static_loc]%>/images/commtrack-logo.png" alt="CommTrack" /></h1>
+		<p><%=@item[:title]%></p>
+    <img src="/<%=@config[:static_loc]%>/images/commtrack-diagram.png" alt="How CommTrack Works" />
+	</hgroup>
+	<div class="container">
+	  <p class="actionable">
+      <a href="#contact-us" data-toggle="modal" class="btn btn-primary btn-large"><%=@item[:contact_us]%></a>
+      <span class="divider"></span>
+      <button class="btn btn-success btn-large" id="tour-commtrack"><%=@item[:tour][:tour_commtrack]%></button>
+    </p> 
+	</div>
+</div>
+
+<div class="container">
+  <div class="what-is-commtrack span5 pull-right well">
+    <%= yield %>
+  </div>
+  <div class="why-commtrack">
+    <h2><%=@item[:why_commtrack][:text]%></h2>
+	  <dl>
+	  <% @item[:why_commtrack][:reasons].each do |why| %>
+	    <dt><i class="<%= why[:icon] %>"></i> <%= why[:title] %></dt>
+	    <dd><%= why[:desc] %></dd>
+	  <% end %>
+	  </dl>
+  </div>
+</div>
+
+<div class="modal hide fade" id="contact-us">
+  <%= render '_home-contactus', :item => @item %>
+</div>
+
+<script>
+  $(function () {  
+    $('#tour-commtrack').popover({
+      html: true,
+      title: "<%=@item[:tour][:text]%>:",
+      content: $('#home-tour-blurb').text(),
+      placement: 'top'
+    })
+  });
+</script>
+
+<script type="text/template" id="home-tour-blurb">
+  <dl class="dl-horizontal dl-tour">
+  <% @item[:tour][:credentials].each do |cred| %>
+    <dt><%= cred[:text] %></dt>
+    <dd><%= cred[:value] %></dd>
+  <% end %>
+  </dl>
+  <p class="text-center"><a href="http://commcarehq.org/" class="btn btn-success"><i class="icon-external-link-sign"></i> <%=@item[:tour][:start_tour]%></a></p>
+</script>

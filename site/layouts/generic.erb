@@ -1,8 +1,9 @@
-<article id="<%= @item[:slug] %>">
-	<hgroup>
-		<h1><%= @item[:title] %></h1>
+<div class="article-header">
+	<hgroup class="container">
+		<h1><% if (@item[:headline]) %><%= @item[:headline] %><% else %><%= @item[:title] %><% end %></h1>
+		<% if (@item[:tagline]) %><h2><%= @item[:tagline] %></h2><% end %>
 	</hgroup>
-	<div class="contain">
-		<%= yield %>
-	</div>
-</article>
+</div>
+<div class="container">
+	<%= yield %>
+</div>

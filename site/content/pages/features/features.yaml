@@ -1,3 +1,57 @@
 slug: features
+css_id: features
+
 title: "Features"
 short_title: "Features"
+
+headline: "Logistics & More..."
+tagline: "Support mobile workers with better stock tracking, requisition planning, and delivery acknowledgement using either SMS or a <a href=\"http://www.commcarehq.org/\">CommCare</a> application." 
+
+features: [
+  {
+    title: "Stock Activity Monitoring",
+    icon: 'logistics',
+    desc: "Capture logistics data including current stock, stockouts, receipts and disbursements"
+  },
+  {
+    title: "Rich Reports and Graphs",
+    icon: 'charts',
+    desc: "Hierarchical graphical and tabular reports on stock levels, reporting rates, and other indicators"
+  },
+  {
+    title: "Requisitions and orders",
+    icon: 'checklist',
+    desc: "Track and approve requisitions, manage orders"
+  },
+  {
+    title: "Automated Analysis",
+    icon: 'analysis',
+    desc: "Automatic calculation of consumption, low stock, and overstock levels to draw meaning out of the numbers"
+  },
+  {
+    title: "Non-Stock Indicators",
+    icon: 'lightbulb',
+    desc: "Data on non-stock indicators can also be reported and aggregated e.g. number of cases treated"
+  },
+  {
+    title: "Interoperability and Open APIs",
+    icon: 'api',
+    desc: "Share data seamlessly with OpenLMIS, MoTeCH, and other systems in compliance with our Open APIs"
+  },
+  {
+    title: "SMS or Email Alerts & Reminders",
+    icon: 'alerts',
+    desc: "Send automated reminders or one-time broadcast messages. Generate automatic alerts on error conditions."
+  },
+  {
+    title: "Turnkey, Cloud-Hosted Solution ",
+    icon: 'globe',
+    desc: "Costs associated with maintenance, new feature development, and hosting are distributed among dozens of organizations in over 25 countries. "
+  },
+  {
+    title: "Flexible Reporting by SMS, Offline Phone Application, or Web Interface",
+    icon: 'low_connectivity',
+    desc: "Stock reports can be submitted over SMS from any phone or through the CommCare mobile application, even with limited or intermittent connectivity."
+  }
+]
+

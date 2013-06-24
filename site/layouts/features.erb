@@ -1,0 +1,33 @@
+<div class="article-header">
+	<hgroup class="container">
+	  <div class="row">
+      <div class="span4" style="text-align: center;">
+        <img src="/<%=@config[:static_loc]%>/images/features/header-features.png" alt="features" />
+      </div>
+      <div class="span8">
+    		<h1><%= @item[:headline] %></h1>
+        <p><%= @item[:tagline] %></p>
+      </div>
+	  </div>
+	</hgroup>
+</div>
+<div class="container">
+  <section style="margin-bottom: 20px;">	
+    <%= yield %>
+  </section>
+  <div class="row">
+    <% @item[:features].each_with_index do |feature, ind| %>
+    <div class="span6 feature-blurb"> 
+      <img src="/<%=@config[:static_loc]%>/images/features/icon-<%=html_escape(feature[:icon])%>.png" 
+           class="pull-left"
+           alt="<%=html_escape(feature[:title])%>" />
+      <h2><%=feature[:title]%></h2>
+      <p><%=feature[:desc]%></p>
+    </div>
+    <% if ((ind + 1) % 2 == 0) %>
+  </div>
+  <div class="row">
+    <% end %>
+    <% end %>
+  </div>
+</div>

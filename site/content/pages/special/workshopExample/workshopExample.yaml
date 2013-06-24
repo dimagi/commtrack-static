@@ -1,4 +1,5 @@
 slug: 'workshops/2013/mumbai'
+css_id: "poc"
 
 title: "CommCare Workshop in Mumbai"
 section: "2013 CommCare Workshops"
@@ -31,9 +32,3 @@ sponsor_logos: [
 
 left_sections: ['workshop_documents', 'resources']
 right_sections: []
-
-locale:
-  fr:
-    slug: 'workshops/2013/mumbai'
-  es:
-    slug: 'workshops/2013/mumbai'

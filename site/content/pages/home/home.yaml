@@ -1,20 +1,64 @@
+css_id: home
 slug: home
 
-title: "CommCare HQ"
+title: "A tool for mobile logistics and supply chain management."
 short_title: "Home"
 
-cchq_action:
-  try_button: "Try CommCare"
-  create_account: "Create a free account."
-  take_tour: "Take a quick tour of CommCare HQ."
-  tour_link: "/tour/"
+tour:
+  text: "Take a tour of CommTrack, with the following credentials"
+  start_tour: "Start Tour"
+  tour_commtrack: "Tour CommTrack"
+  credentials: [
+    {
+      text: "Username",
+      value: "commtrackdemo@gmail.com"
+    },
+    {
+      text: "Password",
+      value: "demo"
+    }
+  ]
+  
+why_commtrack:
+  text: "Why Commtrack?"
+  reasons: [
+    {
+      title: "Data-Driven Decision-Making",
+      icon: "icon-cloud",
+      desc: "Improved, real-time visibility into supply and demand indicators and improved transparency and accountability."
+    },
+    {
+      title: "Streamline Requisitions and Delivery",
+      icon: "icon-truck",
+      desc: "Address and resolve stockouts faster."
+    },
+    {
+      title: "Intelligent Forecasting",
+      icon: "icon-bar-chart",
+      desc: "Automatically infer consumption rates, resupply levels, and impending stockouts."
+    },
+    {
+      title: "Quality",
+      icon: "icon-trophy",
+      desc: "Improve stock management practice and storage conditions through targeted checklists."
+    },
+    {
+      title: "Reduced Losses and Expirations",
+      icon: "icon-money",
+      desc: "Improve tracking and accounting of resources, clients, and vendors."
+    },
+    {
+      title: "Demand Creation",
+      icon: "icon-picture",
+      desc: "Use images, audio, and video to engage audiences and deliver dynamic educational materials."
+    }
+  ]
+      
 
-contact:
-  text: "Contact Us"
-  request: "Request more info."
+contact_us: "Contact Us"
 
 contact_us_form:
-  title: "Contact CommCare"
+  title: "Contact CommTrack"
   submit_button: "Contact Us"
   required_fields:
     first_name: "First Name"
@@ -22,7 +66,7 @@ contact_us_form:
     company: "Company"
     email: "Email Address"
   required_blob: 
-    description: "What is your interest in CommCare and any specific questions you have?"
+    description: "What is your interest in CommTrack and any specific questions you have?"
   optional_fields:
     phone: "Phone Number"
     00Nb0000002JJXA: "Country"

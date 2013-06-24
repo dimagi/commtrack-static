@@ -1,24 +1,23 @@
 <% pricing_table = get_sections(@item, ["pricing_table"]) %>
 
-<article id="plans">
-	<hgroup>
-	 <div class="row">
+<div class="article-header">
+	<hgroup class="container">
+	  <div class="row">
       <div class="span8">
-        <h1><%= @item[:heading] %></h1>
+    		<h1><%= @item[:heading] %></h1>
         <h2><%= html_escape(@item[:desc]) %></h2>
       </div>
       <div class="span4" style="text-align: right;">
-        <img src="/images/plans/plans.png" alt="CommCare HQ Plans" />
+        <img src="/<%=@config[:static_loc]%>/images/plans/header-plans.png" alt="CommCare HQ Plans" />
       </div>
-    </div>
+	  </div>
 	</hgroup>
-	<section id="compare-plans">
+</div>
+<div class="container">
 		<%= yield %>
 		<%= render '_table-pricing', :pricing => pricing_table[0] %>
 		
 		<% if pricing_table[0][:sms_note] %>
 		<p class="muted"><%=pricing_table[0][:sms_note]%></p>
 		<% end %>
-		
-	</section>
-</article>
+</div>

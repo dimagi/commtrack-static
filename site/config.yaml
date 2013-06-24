@@ -67,6 +67,8 @@ watcher:
   
 default_locale: 'en'
 
+static_loc: 'static-resources'
+
 #####
 #####
 ##### GLOBAL TRANSLATIONS BELOW THIS LINE #######################
@@ -113,6 +115,24 @@ workshop:
 footer_links:
   en: [
     {
+      title: "Dimagi",
+      link: "http://www.dimagi.com/",
+      items: [
+        {
+          title: "Dimagi Home",
+          link: "http://www.dimagi.com/"
+        },
+        {
+          title: "About Us",
+          link: "http://www.dimagi.com/about/"
+        },
+        {
+          title: "Contact Us",
+          link: "http://www.dimagi.com/collaborate/contact-us/"
+        }
+      ]
+    },
+    {
       title: "Case Studies",
       link: "/users/",
       items: [
@@ -149,24 +169,6 @@ footer_links:
         {
           title: "Contact Us",
           link: "http://groups.google.com/group/commcare-users"
-        }
-      ]
-    },
-    {
-      title: "Dimagi",
-      link: "http://www.dimagi.com/",
-      items: [
-        {
-          title: "Dimagi Home",
-          link: "http://www.dimagi.com/"
-        },
-        {
-          title: "About Us",
-          link: "http://www.dimagi.com/about/"
-        },
-        {
-          title: "Contact Us",
-          link: "http://www.dimagi.com/collaborate/contact-us/"
         }
       ]
     }

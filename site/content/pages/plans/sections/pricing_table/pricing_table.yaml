@@ -51,6 +51,39 @@ pricing_table: [
     ]
   },
   {
+    title: "SMS",
+    details: [
+      {
+        title: "Outbound Messaging",
+        editions: [false, true, true, true, true]
+      },
+      {
+        title: "Rules Engine",
+        editions: [false, true, true, true, true]
+      },
+      {
+        title: "Android-based SMS Gateway",
+        editions: [false, true, true, true, true]
+      },
+      {
+        title: "SMS Data Collection",
+        editions: [false, false, true, true, true]
+      },
+      {
+        title: "Inbound SMS (where available)",
+        editions: [false, false, true, true, true]
+      },
+      {
+        title: "Included Messages (Dimagi Gateway) **",
+        editions: [~, "250 /month", "1,000 /month", "2,000 /month", "Unlimited"]
+      },
+      {
+        title: "Included Messages (Your Gateway)",
+        editions: [~, "Unlimited", "Unlimited", "Unlimited", "Unlimited"]
+      }
+    ]
+  },
+  {
     title: "Web",
     details: [
       {
@@ -108,39 +141,6 @@ pricing_table: [
       }
     ]
   },
-   {
-    title: "SMS (CommConnect)",
-    details: [
-      {
-        title: "Outbound Messaging",
-        editions: [false, true, true, true, true]
-      },
-      {
-        title: "Rules Engine",
-        editions: [false, true, true, true, true]
-      },
-      {
-        title: "Android-based SMS Gateway",
-        editions: [false, true, true, true, true]
-      },
-      {
-        title: "SMS Data Collection",
-        editions: [false, false, true, true, true]
-      },
-      {
-        title: "Inbound SMS (where available)",
-        editions: [false, false, true, true, true]
-      },
-      {
-        title: "Included Messages (Dimagi Gateway) **",
-        editions: [~, "250 /month", "1,000 /month", "2,000 /month", "Unlimited"]
-      },
-      {
-        title: "Included Messages (Your Gateway)",
-        editions: [~, "Unlimited", "Unlimited", "Unlimited", "Unlimited"]
-      }
-    ]
-  },
   {
     title: "User Management and Security",
     details: [
@@ -194,405 +194,3 @@ pricing_table: [
 ]
 
 sms_note: "** Additional messages will be charged on a per-message fee.  This fee depends on the telecommunications provider and country."
-
-locale:
-  fr:
-    sms_note: "** Additional messages will be charged on a per-message fee.  This fee depends on the telecommunications provider and country."
-    pricing_table: [
-      {
-        title: "Edition",
-        editions: [
-          "Community", 
-          "Standard", 
-          "Pro", 
-          "Advanced", 
-          "Enterprise <span>(Coming Soon)</span>"
-        ]
-      },
-      {
-        title: "Subscription Fee",
-        editions: [
-          "Free",
-          "$100 /month",
-          "$500 /month",
-          "$1,000 /month",
-          "Contact Us"
-        ]
-      },
-      {
-        title: "User Limit",
-        editions: [
-          "50",
-          "100",
-          "500",
-          "1,000",
-          "Unlimited / Discounted Pricing"
-        ]
-      },
-      {
-        title: "Mobile",
-        details: [
-          {
-            title: "J2ME Mobile Client",
-            editions: [true, true, true, true, true]
-          },
-          {
-            title: "Android Mobile Client",
-            editions: [true, true, true, true, true]
-          },
-          {
-            title: "Multimedia Support",
-            editions: [true, true, true, true, true]
-          }
-        ]
-      },
-      {
-        title: "SMS",
-        details: [
-          {
-            title: "Outbound",
-            editions: [false, true, true, true, true]
-          },
-          {
-            title: "Rules Engine",
-            editions: [false, true, true, true, true]
-          },
-          {
-            title: "Android-based SMS Gateway",
-            editions: [false, true, true, true, true]
-          },
-          {
-            title: "SMS Data Collection",
-            editions: [false, false, true, true, true]
-          },
-          {
-            title: "Inbound SMS (where available)",
-            editions: [false, false, true, true, true]
-          },
-          {
-            title: "Included Messages (Dimagi Gateway) **",
-            editions: [~, "250 /month", "1,000 /month", "2,000 /month", "Discounted Pricing"]
-          },
-          {
-            title: "Included Messages (Your Gateway)",
-            editions: [~, "Unlimited", "Unlimited", "Unlimited", "Unlimited"]
-          }
-        ]
-      },
-      {
-        title: "Web",
-        details: [
-          {
-            title: "Application builder",
-            editions: [true, true, true, true, true]
-          },
-          {
-            title: "CommCare Exchange",
-            editions: [true, true, true, true, true]
-          },
-          {
-            title: "API Access",
-            editions: [false, true, true, true, true]
-          },
-          {
-            title: "Lookup Tables",
-            editions: [false, true, true, true, true]
-          },
-          {
-            title: "Web Applications (CloudCare)",
-            editions: [false, false, true, true, true]
-          },
-          {
-            title: "Customized Branding (coming soon)",
-            editions: [false, false, false, true, true]
-          }
-        ]
-      },
-      {
-        title: "Analytics",
-        details: [
-          {
-            title: "Data Export",
-            editions: [true, true, true, true, true]
-          },
-          {
-            title: "Standard Reports",
-            editions: [true, true, true, true, true]
-          },
-          {
-            title: "Mobile Reporting",
-            editions: [false, false, true, true, true]
-          },
-          {
-            title: "Custom Reporting",
-            editions: [false, false, true, true, true]
-          },
-          {
-            title: "Active Data Management Analytics",
-            editions: [false, false, false, true, true]
-          },
-          {
-            title: "Ad-hoc Data Exploration (coming soon)",
-            editions: [false, false, false, true, true]
-          },
-          {
-            title: "Multi-Domain Analytics (coming soon)",
-            editions: [false, false, false, false, true]
-          }
-        ]
-      },
-      {
-        title: "Security and User Management",
-        details: [
-          {
-            title: "Reporting Groups",
-            editions: [true, true, true, true, true]
-          },
-          {
-            title: "Organizations",
-            editions: [false, true, true, true, true]
-          },
-          {
-            title: "Role-Based Access",
-            editions: [false, true, true, true, true]
-          },
-          {
-            title: "Bulk user and group uploads",
-            editions: [false, true, true, true, true]
-          },
-          {
-            title: "HIPAA compliance",
-            editions: [false, false, true, true, true]
-          },
-          {
-            title: "De-identified Data Viewing",
-            editions: [false, false, true, true, true]
-          }
-        ]
-      },
-      {
-        title: "Support",
-        details: [
-          {
-            title: "Community Support",
-            editions: [true, true, true, true, true]
-          },
-          {
-            title: "Direct Email Support",
-            editions: [false, true, true, true, true]
-          },
-          {
-            title: "Phone Support",
-            editions: [false, false, true, true, true]
-          },
-          {
-            title: "Dedicated Support Staff",
-            editions: [false, false, false, true, true]
-          },
-          {
-            title: "Dedicated Enterprise Account Management",
-            editions: [false, false, false, false, true]
-          }
-        ]
-      }
-    ]
-  es:
-    sms_note: "** Additional messages will be charged on a per-message fee.  This fee depends on the telecommunications provider and country."
-    pricing_table: [
-      {
-        title: "Edition",
-        editions: [
-          "Community", 
-          "Standard", 
-          "Pro", 
-          "Advanced", 
-          "Enterprise <span>(Coming Soon)</span>"
-        ]
-      },
-      {
-        title: "Subscription Fee",
-        editions: [
-          "Free",
-          "$100 /month",
-          "$500 /month",
-          "$1,000 /month",
-          "Contact Us"
-        ]
-      },
-      {
-        title: "User Limit",
-        editions: [
-          "50",
-          "100",
-          "500",
-          "1,000",
-          "Unlimited / Discounted Pricing"
-        ]
-      },
-      {
-        title: "Mobile",
-        details: [
-          {
-            title: "J2ME Mobile Client",
-            editions: [true, true, true, true, true]
-          },
-          {
-            title: "Android Mobile Client",
-            editions: [true, true, true, true, true]
-          },
-          {
-            title: "Multimedia Support",
-            editions: [true, true, true, true, true]
-          }
-        ]
-      },
-      {
-        title: "SMS",
-        details: [
-          {
-            title: "Outbound",
-            editions: [false, true, true, true, true]
-          },
-          {
-            title: "Rules Engine",
-            editions: [false, true, true, true, true]
-          },
-          {
-            title: "Android-based SMS Gateway",
-            editions: [false, true, true, true, true]
-          },
-          {
-            title: "SMS Data Collection",
-            editions: [false, false, true, true, true]
-          },
-          {
-            title: "Inbound SMS (where available)",
-            editions: [false, false, true, true, true]
-          },
-          {
-            title: "Included Messages (Dimagi Gateway) **",
-            editions: [~, "250 /month", "1,000 /month", "2,000 /month", "Discounted Pricing"]
-          },
-          {
-            title: "Included Messages (Your Gateway)",
-            editions: [~, "Unlimited", "Unlimited", "Unlimited", "Unlimited"]
-          }
-        ]
-      },
-      {
-        title: "Web",
-        details: [
-          {
-            title: "Application builder",
-            editions: [true, true, true, true, true]
-          },
-          {
-            title: "CommCare Exchange",
-            editions: [true, true, true, true, true]
-          },
-          {
-            title: "API Access",
-            editions: [false, true, true, true, true]
-          },
-          {
-            title: "Lookup Tables",
-            editions: [false, true, true, true, true]
-          },
-          {
-            title: "Web Applications (CloudCare)",
-            editions: [false, false, true, true, true]
-          },
-          {
-            title: "Customized Branding (coming soon)",
-            editions: [false, false, false, true, true]
-          }
-        ]
-      },
-      {
-        title: "Analytics",
-        details: [
-          {
-            title: "Data Export",
-            editions: [true, true, true, true, true]
-          },
-          {
-            title: "Standard Reports",
-            editions: [true, true, true, true, true]
-          },
-          {
-            title: "Mobile Reporting",
-            editions: [false, false, true, true, true]
-          },
-          {
-            title: "Custom Reporting",
-            editions: [false, false, true, true, true]
-          },
-          {
-            title: "Active Data Management Analytics",
-            editions: [false, false, false, true, true]
-          },
-          {
-            title: "Ad-hoc Data Exploration (coming soon)",
-            editions: [false, false, false, true, true]
-          },
-          {
-            title: "Multi-Domain Analytics (coming soon)",
-            editions: [false, false, false, false, true]
-          }
-        ]
-      },
-      {
-        title: "Security and User Management",
-        details: [
-          {
-            title: "Reporting Groups",
-            editions: [true, true, true, true, true]
-          },
-          {
-            title: "Organizations",
-            editions: [false, true, true, true, true]
-          },
-          {
-            title: "Role-Based Access",
-            editions: [false, true, true, true, true]
-          },
-          {
-            title: "Bulk user and group uploads",
-            editions: [false, true, true, true, true]
-          },
-          {
-            title: "HIPAA compliance",
-            editions: [false, false, true, true, true]
-          },
-          {
-            title: "De-identified Data Viewing",
-            editions: [false, false, true, true, true]
-          }
-        ]
-      },
-      {
-        title: "Support",
-        details: [
-          {
-            title: "Community Support",
-            editions: [true, true, true, true, true]
-          },
-          {
-            title: "Direct Email Support",
-            editions: [false, true, true, true, true]
-          },
-          {
-            title: "Phone Support",
-            editions: [false, false, true, true, true]
-          },
-          {
-            title: "Dedicated Support Staff",
-            editions: [false, false, false, true, true]
-          },
-          {
-            title: "Dedicated Enterprise Account Management",
-            editions: [false, false, false, false, true]
-          }
-        ]
-      }
-    ]

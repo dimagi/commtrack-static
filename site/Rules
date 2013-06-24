@@ -15,7 +15,7 @@
 
 ###### Compiling #######
 
-:fi # lesystem_i18n.layout
+# :fi # lesystem_i18n.layout
 
 compile '/stylesheets/*' do
   filter :less
@@ -36,37 +36,49 @@ preprocess do
   end
 end
 
-compile '/*/pages/(users)/subpage/*' do 
+compile '/pages/users/subpage/*' do 
   filter :kramdown
   filter :erb
   layout 'carousel'
   layout 'base'
 end
 
-compile '/*/pages/*/sections/*' do
+route '/*/pages/(tour|users)/subpage/*' do 
+  get_page_url(@item) + item[:sub_slug] + "/index.html"
+end
+
+compile '/pages/*/sections/*' do
   filter :kramdown
 end
 
-compile '/*/pages/(users)/*' do
+# Keeping this around if the users page expands...
+# compile '/pages/users/*' do
+#   filter :kramdown
+#   filter :erb
+#   layout 'carousel'
+#   layout 'base'
+# end
+
+compile '/pages/special/*/*' do
   filter :kramdown
   filter :erb
-  layout 'carousel'
+  layout 'special'
   layout 'base'
 end
 
-compile '/*/pages/(special)/*/*' do
+compile '/pages/special/*' do
   filter :kramdown
   filter :erb
-  layout 'poc'
+end
+
+compile '/pages/(home|plans|services|features|users)/*' do
+  filter :kramdown
+  filter :erb
+  layout item.identifier.split('/')[-1]
   layout 'base'
 end
 
-compile '/*/pages/(special)/*' do
-  filter :kramdown
-  filter :erb
-end
-
-compile '/*/pages/*' do
+compile '/pages/*' do
   filter :kramdown
   filter :erb
   layout 'generic'
@@ -93,30 +105,30 @@ route '/robots' do
 end
 
 route '/stylesheets/*' do
-  item.identifier.sub(%r{^/stylesheets}, '/style').chop + '.css' 
+  item.identifier.sub(%r{^/stylesheets}, "/#{@config[:static_loc]}/style").chop + '.css'
 end
 
 route '/scripts/*' do 
-  item.identifier.sub(%r{^/scripts}, '/js').chop + '.js'
+  item.identifier.sub(%r{^/scripts}, "/#{@config[:static_loc]}/js").chop + '.js'
 end
 
-route '/*/pages/(users)/subpage/*' do 
+route '/pages/(users)/subpage/*' do 
   get_page_url(@item) + item[:sub_slug] + "/index.html"
 end
 
-route '/*/pages/*/sections/*' do 
+route '/pages/*/sections/*' do 
     # nothing
 end
 
-route '/*/pages/(special)/*/*' do 
+route '/pages/(special)/*/*' do 
   get_page_url(@item) + "index.html"
 end
 
-route '/*/pages/(special)/*' do 
+route '/pages/(special)/*' do 
   # nothing
 end
 
-route '/*/pages/*' do 
+route '/pages/*' do 
    get_page_url(@item) + "index.html"
 end
 

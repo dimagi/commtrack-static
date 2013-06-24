@@ -1,4 +1,4 @@
-@image-base: '/images/';
+@imagesLocation: '/static-resources/images/';
 
 // Layout
 @pageWidth: 960px;
@@ -15,13 +15,12 @@
 // Colors
 @backgroundColor: #FBFBFB;
 
-@darkTextColor: #333333;
-@inverseTextColor: #FFFFFF;
+@inverseTextColor: @white;
 @navHighlightColor: #666666;
 @footerTextColor: #CCCCCC;
-@headerBGColor: @darkTextColor;
+@headerBGColor: @grayDark;
 
-@commCareBlue: #0061AF;
+@commCareBlue: #1e559e;
 @blue: @commCareBlue;
 @commCareGray: #939598;
 
@@ -32,13 +31,15 @@
 @orange: #FF6600;
 @green: #40C446;
 @white: #ffffff;
+@gray: #6c6c6e;
 
 @dropdownLinkBackgroundHover: @commCareBlue;
+
+// Pricing and Services
 
 @pricingCommunityColor: @commCareBlue;
 @pricingCommunityTextColor: @pricingCommunityColor;
 @pricingCommunityBackgroundColor: lighten(desaturate(@pricingCommunityColor, 40), 60);
-
 
 @pricingStandardColor: @green;
 @pricingStandardTextColor: darken(@pricingStandardColor, 20);
@@ -60,6 +61,7 @@
 
 @baseLineHeight: 20px;
 @zindexPricingTableHeader: 800;
-@FontAwesomePath:    "/style/font";
+@FontAwesomePath:    "/static-resources/style/font";
 
-
+@baseFontFamily: 'Noto Sans', sans-serif;
+@altFontFamily: 'Raleway', sans-serif;

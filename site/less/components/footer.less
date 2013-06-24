@@ -1,0 +1,23 @@
+footer {
+  // Necessary for sticky footer
+  height: @footerHeight;
+  margin-top: -@footerHeight;
+
+  clear:both;
+  color: @inverseTextColor;
+  background-color: @grayDark;
+
+  .container {
+    padding-top: @gridGutterWidth;
+  }
+
+  a {
+    &:link, &:visited {
+      color: @footerTextColor;
+    }
+    &:hover {
+      color: @inverseTextColor;
+      text-decoration: underline;
+    }
+  }
+}

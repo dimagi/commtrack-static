@@ -5,36 +5,6 @@
 .font-size(@newSize:16, @base:16) {
 	font-size: (@newSize / @base) * 1em;
 }
-.lato-family() {
-	font-family: 'Lato', 'Helvetica Neue', 'Helvetica', 'Arial', 'Verdana', sans-serif;
-}
-.corben-family() {
-	font-family: 'Corben', Georgia, 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-}
-
-//// Headlines
-.headline() { // originally headline-standard
-	.font-size(34);
-}
-.headline-large() { // originally large-headline
-	.font-size(50);
-	line-height: 1.1em;
-}
-.headline-small() { //originally small-headline
-	.font-size(20);
-}
-.paragraph() { // originally paragraph-style
-	.font-size(14);
-	line-height: 1.57em;
-	font-weight: 400;
-	margin: 1em 0;
-}
-.sub-headline() { //
-	.font-size(25);
-}
-.tagline() { //originally tagline
-	.font-size(18);
-}
 
 //// Structure
 
@@ -167,13 +137,13 @@
 }
 
 .gray-button () {
-	background-color: @darkTextColor;
+	background-color: @grayDark;
 	.box-shadow();
-	#gradient > .vertical(@navHighlightColor, @darkTextColor);
-	border: 1px solid @darkTextColor;
+	#gradient > .vertical(@navHighlightColor, @grayDark);
+	border: 1px solid @grayDark;
 	&:hover {
-		#gradient > .vertical(lighten(@navHighlightColor, 15%), lighten(@darkTextColor, 15%));
-		border: 1px solid lighten(@darkTextColor, 15%);
+		#gradient > .vertical(lighten(@navHighlightColor, 15%), lighten(@grayDark, 15%));
+		border: 1px solid lighten(@grayDark, 15%);
 		text-decoration: none;
 	}
 }
@@ -195,17 +165,10 @@
 	background-color: @commCareGray;
 	.box-shadow();
 }
-
-.hgroup-commcare() {
-	#gradient > .vertical(fadeout(lighten(@commCareBlue, 65%), 84%), fadeout(@commCareBlue, 84%));
-	border-bottom: 1px solid fadeout(darken(@commCareBlue, 10%), 84%);
-}
 .nav-shadow() {
 	.box-shadow(0 0 5px rgba(0, 0, 0, 0.5));
 }
-.dev-diagram-shadow() {
-	.box-shadow(0 0 10px fadeout(darken(@commCareBlue, 35%), 35%));
-}
+
 .image-style() {
 	.box-shadow(0 0 4px rgba(0, 0, 0, 0.5));
 }
@@ -226,7 +189,7 @@
 	border-bottom: 2px solid @commCareBlue;
 	padding-bottom: .1em;
 	&:hover {
-		border-bottom-color: @darkTextColor;
+		border-bottom-color: @grayDark;
 	}
 }
 

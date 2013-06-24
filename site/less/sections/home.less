@@ -1,0 +1,106 @@
+#home {
+  .article-header {
+    padding: @gridGutterWidth 0;
+  }
+  .article-header hgroup {
+    text-align: center;
+    p {
+      color: @gray;
+      font-size: @fontSizeLarge;
+    }
+    > img {
+      height: 297px;
+      margin: @gridGutterWidth 0;
+    }
+  }
+  .dl-tour {
+    dt {
+      width: 85px;
+    }
+    dd {
+      margin-left: 85+@gridGutterWidth;
+    }
+  }
+  .actionable {
+    text-align: center;
+    .popover {
+      max-width: 350px;
+      h3 {
+        font-family: @baseFontFamily;
+        font-size: @fontSizeLarge;
+        line-height: @baseLineHeight*1.1;
+        font-weight: 400;
+      }
+    }
+    .divider {
+      width: 1px;
+      background-color: @grayLighter;
+      height: 45px;
+      display: inline-block;
+      margin: 0 @gridGutterWidth;
+      vertical-align: top;
+    }
+  }
+}
+
+#home .why-commtrack {
+  font-size: @fontSizeLarge;
+  line-height: @baseLineHeight*1.2;
+  dt {
+    color: @grayDark;
+    font-weight: 700;
+    font-size: @baseFontSize*2;
+    line-height: @baseFontSize*2;
+    position: relative;
+    padding-left: 60px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+
+    i {
+      color: @blue;
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 1.6em;
+    }
+    &:nth-of-type(3n + 2) i { color: @green; }
+    &:nth-of-type(3n + 3) i { color: @orange; }
+  }
+  dd {
+    color: @gray;
+    margin-bottom: @gridGutterWidth;
+    line-height: @baseLineHeight*1.4;
+    margin-top: 5px;
+    margin-left: 60px;
+  }
+  h2 {
+    margin: 1em 0 !important;
+    font-size: 50px;
+  }
+}
+
+#home .what-is-commtrack {
+  margin-top: 140px;
+
+  h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+  
+  ul {
+    list-style: none;
+  }
+
+  li {
+    margin-bottom: 20px;
+    position: relative;
+    &:before {
+      content: @ok;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: -20px;
+      font-family: 'FontAwesome';
+    }
+  }
+}

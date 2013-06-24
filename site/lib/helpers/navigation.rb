@@ -9,7 +9,7 @@ module Nanoc3::Helpers
         order.each do |page_nav|
           if page_nav.kind_of?(Array)
           
-            dropdown_title = @config[:nav_dropdowns][page_nav[0].to_sym][item[:locale]]
+            dropdown_title = @config[:nav_dropdowns][page_nav[0].to_sym]["en".to_sym]
             dropdown_menu, pages = build_navigation(page_nav[1], item, true)
             
             is_active = false
@@ -43,11 +43,11 @@ module Nanoc3::Helpers
       end
       
       def get_locale_prefix(item)
-        prefix = "/#{item[:locale]}"
-        if is_prefix_default(prefix)
-          prefix = ""
-        end
-        return prefix
+        # prefix = "/#{item[:locale]}"
+#         if is_prefix_default(prefix)
+#           prefix = ""
+#         end
+        return ""
       end
       
       def is_prefix_default(prefix)
@@ -55,18 +55,19 @@ module Nanoc3::Helpers
       end
       
       def get_page_for_locale(item, loc)
-        prefix = "/#{loc}"
-        if is_prefix_default(prefix)
-          prefix = ""
-        end
+        # prefix = "/#{loc}"
+#         if is_prefix_default(prefix)
+#           prefix = ""
+#         end
+        prefix = ""
         filename = item[:meta_filename]
-        parent_id = filename.split('/')[1..-2].join('/')
-        page = @items.find { |i| i.identifier == "/#{loc}/#{parent_id}/" }
+        parent_id = filename.split('/')[0..-2].join('/')
+        page = @items.find { |i| i.identifier == "/#{parent_id}/" }
         return get_page_url(page)
       end
       
       def get_page(page_slug, item)
-        return @items.find { |i| i.identifier == "/#{item[:locale]}/pages/#{page_slug}/" } 
+        return @items.find { |i| i.identifier == "/pages/#{page_slug}/" } 
       end
       
       def get_sections(page, section_slugs=nil)
@@ -77,7 +78,7 @@ module Nanoc3::Helpers
         section_slugs.each do |slug|
           path = page.identifier.split("/")
           # HACK / lazy
-          if path.index("div2") != nil || path.index("workshops") != nil || path.index("poc") != nil
+          if path.index("special") != nil
             path = path[1..4]
           else
             path = path[1..3]
