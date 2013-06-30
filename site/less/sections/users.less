@@ -1,0 +1,43 @@
+#users .case-study{
+  .dl-horizontal {
+    dt {
+      width: 70px;
+    }
+    dd {
+      margin-left: 90px;
+    }
+  }
+  .pdf {
+    .box-shadow(0px 0px 5px rgba(0, 0, 0, 0.3));
+    a {
+      position: relative;
+      display: block;
+    }
+    .download-pdf {
+      width: 300px;
+      line-height: 40px;
+      position: absolute;
+      top: 50%;
+      text-align: center;
+      left: 0;
+      background-color: rgba(50, 50, 50, 0.8);
+      color: @white;
+      z-index: 900;
+    }
+    &:hover {
+      a:after {
+        content: " ";
+        position: absolute;
+        width: 300px;
+        height: 390px;
+        display: block;
+        left: 0;
+        top: 0;
+        background-color: rgba(50, 50, 50, 0.2);
+      }
+      .download-pdf {
+        background-color: @green;
+      }
+    }
+  }
+}

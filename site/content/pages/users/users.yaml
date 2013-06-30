@@ -1,11 +1,17 @@
 slug: "users"
 carousel_start: 1
 
-sections: ["who_uses_commtrack", "case_studies"]
+sections: ["cs-cstock", "cs-ilsgateway", "cs-ews"]
 css_id: users
 
-title: "Our Users"
+title: "Case Studies & Users"
 short_title: "Our Users"
 
-tagline: "Something a bit more should go here."
+tagline: "CommTrack in the field."
 
+download_pdf: "Download PDF"
+case_studies: "Case Studies"
+
+cs_country: "Country"
+cs_partners: "Partners"
+cs_start_date: "Start Date"

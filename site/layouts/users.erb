@@ -1,3 +1,5 @@
+<% case_studies = get_sections(@item) %>
+
 <div class="article-header">
 	<hgroup class="container">
 	  <div class="row">
@@ -13,4 +15,30 @@
 </div>
 <div class="container">
   <%= yield %>
+  <section>
+    <h2><%= @item[:case_studies] %></h2>
+    <div class="row">
+      <% case_studies.each do |study| %>
+        <div class="span4 case-study">
+          <h3><%=study[:title]%></h3>
+          <p class="pdf">
+            <a href="/<%=@config[:static_loc]%><%=study[:link]%>" download="<%=study[:download_as]%>"><img src="/<%=@config[:static_loc]%><%=study[:thumbnail]%>" alt="<%=study[:download_as]%>" />
+              <span class="download-pdf"><i class="icon-download-alt"></i> <%=@item[:download_pdf]%></span>
+            </a>
+          </p>
+          <dl class="dl-horizontal">
+            <dt><%=@item[:cs_country]%></dt>
+            <dd><%=study[:country]%></dd>
+            
+            <dt><%=@item[:cs_start_date]%></dt>
+            <dd><%=study[:start_date]%></dd>
+            
+            <dt><%=@item[:cs_partners]%></dt>
+            <dd><%=study[:partners]%></dd>
+          </dl>
+          <%= study.compiled_content %>
+        </div>
+      <% end %>
+    </div>
+  </section>
 </div>
