@@ -137,20 +137,16 @@ footer_links:
       link: "/users/",
       items: [
         {
-          title: "CommCare ASHA",
-          link: "/users/commcare_asha/"
+          title: "cStock (Malawi)",
+          link: "/users/#cs-cstock"
         },
         {
-          title: "CommCare TZ",
-          link: "/users/commcare_tanzania/"
+          title: "ILSGateway (Tanzania)",
+          link: "/users/#cs-ilsgateway"
         },
         {
-          title: "CommCare Zambia",
-          link: "/users/commcare_zambia/"
-        },
-        {
-          title: "CommCare US",
-          link: "/users/commcare_us/"
+          title: "Early Warning System (Ghana)",
+          link: "/users/#cs-ews"
         }
       ] 
     },
@@ -163,12 +159,8 @@ footer_links:
           link: "/support/#for-users"
         },
         {
-          title: "Developers",
-          link: "/support/#for-developers"
-        },
-        {
           title: "Contact Us",
-          link: "http://groups.google.com/group/commcare-users"
+          link: "http://groups.google.com/group/commtrack-users"
         }
       ]
     }
