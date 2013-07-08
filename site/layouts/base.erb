@@ -43,7 +43,7 @@
             <ul>
                 <%= build_navigation(['home', 'features', 'users', 'support', ['pricing', ['plans', 'services']]], @item) %>
                 <li class="extras">
-                  <a class="btn btn-primary" href="/accounts/login/" <% if use_analytics %><%= track_event('Sign In', 'Top Blue Button', 'Nav Bar') %><% end %>><%=@config[:global_text][:sign_in][locale] %></a>
+                  <a class="btn btn-primary" href="/accounts/login/commtrack" <% if use_analytics %><%= track_event('Sign In', 'Top Blue Button', 'Nav Bar') %><% end %>><%=@config[:global_text][:sign_in][locale] %></a>
                 </li>
             </ul>
         </nav>
