@@ -91,7 +91,7 @@ pricing_table: [
         editions: [true, true, true, true, true]
       },
       {
-        title: 'CommCare Exchange (<a href="http://www.commcarehq.org/exchange">visit the Exchange</a>)',
+        title: 'CommCare App Exchange (<a href="http://www.commcarehq.org/exchange">visit the Exchange</a>)',
         editions: [true, true, true, true, true]
       },
       {
@@ -170,7 +170,7 @@ pricing_table: [
     title: "Support",
     details: [
       {
-        title: 'Community Support (<a href="https://groups.google.com/forum/?fromgroups#!forum/commcare-users">visit commcare-users</a>)',
+        title: 'Community Support (<a href="https://groups.google.com/forum/?fromgroups#!forum/commtrack-users">visit commtrack-users</a>)',
         editions: [true, true, true, true, true]
       },
       {
