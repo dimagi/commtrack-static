@@ -20,7 +20,7 @@ tour:
   ]
   
 why_commtrack:
-  text: "Why Commtrack?"
+  text: "Why CommTrack?"
   reasons: [
     {
       title: "Data-Driven Decision-Making",
