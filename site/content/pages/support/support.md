@@ -21,7 +21,7 @@
 
 ### Additional Resources
 
-To learn more about CommCare deployments and ICT for supply chain management in general, we recommend the following resources:
+To learn more about ICT for supply chain management in general, we recommend the following resources:
 
 - [IAPHL](http://iaphl.org/)  
   The International Association of Public Health Logisticians.
