@@ -6,7 +6,7 @@ edition_classes: [
   
 pricing_table: [
   {
-    title: "Service Edition",
+    title: "Service",
     editions: [
       "Basic", 
       "Plus", 
@@ -22,11 +22,11 @@ pricing_table: [
     ]
   },
   {
-    title: "Included Pricing Plan (<a href='/plans/'>See Plans</a>)",
+    title: "Included Software Plan (<a href='/plans/'>See Plans</a>)",
     editions: [
-      "Community Edition (FREE)",
-      '12 months of Pro Edition',
-      '12 months of Advanced Edition'
+      "Community Software Plan (FREE)",
+      '12 months of the Pro Software Plan',
+      '12 months of the Advanced Software Plan'
     ]
   },
   {

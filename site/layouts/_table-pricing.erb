@@ -6,7 +6,13 @@
       <td></td>
       <th class="feature-section"><%=feature[:title]%></th>
       <% feature[:editions].each_with_index do |edition, i_edition| %>
-        <th class="edition <%=pricing[:edition_classes][i_edition]%>"><div><%=edition%></div></th>
+        <th class="edition <%=pricing[:edition_classes][i_edition]%>">
+          <div class="edition-heading"
+               <% if feature[:hover_text] %>data-title="<%=feature[:hover_text][i_edition]%>"<% end %>>
+               <%=edition%>
+               <% if feature[:hover_text] %><i class="icon-info-sign corner-icon"></i><% end %>
+          </div>
+        </th>
       <% end %>
     </tr>
   </thead>
@@ -14,7 +20,10 @@
   <tbody<% if feature[:details] %> class="feature-details"<% end %>>
     <tr>
       <% if feature[:details] %>
-        <th class="feature-section" rowspan="<%=feature[:details].length%>"><div><span><%=feature[:title]%></span></div></th>
+        <th class="feature-section" rowspan="<%=feature[:details].length%>"><div><span><%=feature[:title]%>
+        <% if (feature[:link]) %><a href="<%=feature[:link]%>" 
+                                   class="pull-right btn btn-success btn-mini learn-more"><%=pricing[:learn_more]%></a><% end %>
+        </span></div></th>
         <% feature[:details].each_with_index do |detail, i_detail| %>
           <% if i_detail != 0 %>
           </tr><tr>
@@ -45,3 +54,9 @@
     </tr>
   </tfoot>
 </table>
+
+<% if pricing[:pricing_table][0][:hover_text] %><script>
+  $(function () {
+    $('.edition-heading').tooltip();
+  });
+</script><% end %>

@@ -17,7 +17,11 @@
 		<%= yield %>
 		<%= render '_table-pricing', :pricing => pricing_table[0] %>
 		
-		<% if pricing_table[0][:sms_note] %>
-		<p class="muted"><%=pricing_table[0][:sms_note]%></p>
+		<% if pricing_table[0][:footnotes] %>
+		<ul class="pricing-footnotes">
+		<% pricing_table[0][:footnotes].each do |footnote| %>
+		  <li class="muted"><%=footnote%></li>	
+		<% end %>
+		</ul>
 		<% end %>
 </div>

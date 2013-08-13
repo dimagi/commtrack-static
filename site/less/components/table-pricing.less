@@ -111,49 +111,82 @@
   .edition {
     padding: 0;
     
-    > div {
-      z-index: @zindexPricingTableHeader;
-      padding: 25px 0;      
-      width: 130px;
-      .box-shadow(0 0 4px rgba(0, 0, 0, 0.3));
-      color: @white;
-      border: 4px solid @white;
-      .rounded(12px);
-      vertical-align: middle;
-      position: relative;
-      text-align: center;
-      
-      span {
-        display: block;
-        font-size: @baseFontSize*.85;
+    .tooltip {
+      &.in     { .opacity(100); }
+      &.top .tooltip-arrow {
+        border-top-color: @white;
       }
+    }
+    .tooltip-inner {
+      font-size: @baseFontSize*.9;
+      border: 4px solid @white;
+      .box-shadow(0 0 8px rgba(0, 0, 0, 0.3));
+      padding: 10px 15px;
+      font-weight: normal;
+      text-align: left;
     }
   }
   
-  .edition-community div {
-    background-color: @pricingCommunityColor;
-    #gradient > .vertical(lighten(@pricingCommunityColor, 10), @pricingCommunityColor);
+  .edition-heading {
+    z-index: @zindexPricingTableHeader;
+    padding: 25px 0;      
+    width: 130px;
+    .box-shadow(0 0 4px rgba(0, 0, 0, 0.3));
+    color: @white;
+    border: 4px solid @white;
+    .rounded(12px);
+    vertical-align: middle;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    
+    span {
+      display: block;
+      font-size: @baseFontSize*.85;
+    }
+    
+    .corner-icon {
+      color: @white;
+      position: absolute;
+      top: 4px;
+      right: 5px;
+    }
   }
   
-  .edition-standard div {
-    background-color: @pricingStandardColor;
-    #gradient > .vertical(lighten(@pricingStandardColor, 10), @pricingStandardColor);
+  .edition-community {
+    .edition-heading, .tooltip-inner {
+      background-color: @pricingCommunityColor;
+      #gradient > .vertical(lighten(@pricingCommunityColor, 10), @pricingCommunityColor);
+    }
   }
   
-  .edition-pro div {
-    background-color: @pricingProColor;
-    #gradient > .vertical(lighten(@pricingProColor, 10), @pricingProColor);
+  .edition-standard {
+    .edition-heading, .tooltip-inner {
+      background-color: @pricingStandardColor;
+      #gradient > .vertical(lighten(@pricingStandardColor, 10), @pricingStandardColor);
+    }
   }
   
-  .edition-advanced div {
-    background-color: @pricingAdvancedColor;
-    #gradient > .vertical(lighten(@pricingAdvancedColor, 10), @pricingAdvancedColor);
+  .edition-pro {
+    .edition-heading, .tooltip-inner {
+      background-color: @pricingProColor;
+      #gradient > .vertical(lighten(@pricingProColor, 10), @pricingProColor);
+    }
   }
   
-  .edition-enterprise div {
-    padding: 16px 0;
-    background-color: @pricingEnterpriseColor;
-    #gradient > .vertical(lighten(@pricingEnterpriseColor, 10), @pricingEnterpriseColor);
+  .edition-advanced {
+    .edition-heading, .tooltip-inner {
+      background-color: @pricingAdvancedColor;
+      #gradient > .vertical(lighten(@pricingAdvancedColor, 10), @pricingAdvancedColor);
+    }
+  }
+  
+  .edition-enterprise {
+    .edition-heading, .tooltip-inner {
+      background-color: @pricingEnterpriseColor;
+      #gradient > .vertical(lighten(@pricingEnterpriseColor, 10), @pricingEnterpriseColor);
+    }
+    .edition-heading { padding: 16px 0; }
   }
   
 }
@@ -195,3 +228,24 @@
   
 }
 
+.pricing-footnotes {
+  font-size: @baseFontSize * 0.9;
+  list-style: none;
+  li {
+    margin: 5px 0;
+    text-align: left;
+  }
+}
+
+.table-pricing {
+  .learn-more {
+    margin-top: 6px;
+    margin-right: 10px;
+    text-transform: uppercase;
+    
+    &:link, &:visited {
+      color: @white;
+    }
+    
+  }
+}
