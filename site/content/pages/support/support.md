@@ -27,6 +27,5 @@ To learn more about ICT for supply chain management in general, we recommend the
   The International Association of Public Health Logisticians.
 - [E-Drug](http://www.essentialdrugs.org/edrug/)  
   DRUG is used by health care professionals, researchers and policy makers to obtain and discuss current information on essential drugs, policy, program activities, education and training.
-{: .resources-list}
-- [Lessons Learned](/docs/LMIS/Lessons_Learned.pdf)
-- This report is a summary of Dimagi experiences working on a variety of open-source ICTs for supply chains (ICT4SC) in low-resource settings from light mobile applications to simple information systems.
+- [Lessons Learned](/static-resources/docs/LMIS/Lessons_Learned.pdf)
+  This report is a summary of Dimagi experiences working on a variety of open-source ICTs for supply chains (ICT4SC) in low-resource settings from light mobile applications to simple information systems.
