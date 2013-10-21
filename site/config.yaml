@@ -90,14 +90,14 @@ nav_dropdowns:
   pricing:
     en: "Pricing"
     
-# announcements: [
-#   {
-#     en: {
-#       link: '/workshops/2013/mumbai/',
-#       text: "<strong>Request for Applications</strong> CommCare Workshop in Mumbai"
-#       }
-#   }
-# ]
+announcements: [
+  {
+    en: {
+      link: 'http://www.commcarehq.org/poc/commtrack/',
+      text: "<strong>Request for Applications:</strong> CommTrack Proof of Concept: Free Phones and Technical Support"
+      }
+  }
+]
 
 copyright_text:
   en: "Copyright"
