@@ -1,8 +1,0 @@
-- [Video: How CommCare is Used](http://www.youtube.com/watch?v=ZpfvISKxylE)
-- [Video: CommCare to combat Malnutrition](http://www.youtube.com/watch?v=fSzobuOZxO8)
-- [Video: CommCare for Maternal and Child Health](http://www.youtube.com/watch?v=QTjs61L5l2Q)
-- [CommCare Evidence Base](https://www.google.com/url?q=https%3A%2F%2Fconfluence.dimagi.com%2Fdownload%2Fattachments%2F12226140%2FCommCare%2BEvidence%2BBase%2BFebruary%2B2013.pdf%3Fversion%3D1%26modificationDate%3D1363619871232&sa=D&sntz=1&usg=AFQjCNGkwvv5d6HZoEtXV59Msh9uS_3rfA)
-- [CommCare HQ: Take a Tour](/tour/)
-- [Application Creation](https://wiki.commcarehq.org/display/commcarepublic/Getting+Started+with+CommCare)
-- [Training Manuals and Guides](https://wiki.commcarehq.org/pages/viewpage.action?pageId=4718822)
-- [Tutorial: CommCare Case Management](http://prezi.com/yb_irf3olagm/cases-in-commcare/)
