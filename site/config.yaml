@@ -93,7 +93,7 @@ nav_dropdowns:
 announcements: [
   {
     en: {
-      link: 'http://www.commcarehq.org/poc/commtrack/',
+      link: '/poc/commtrack/',
       text: "<strong>Request for Applications:</strong> CommTrack Proof of Concept: Free Phones and Technical Support"
       }
   }

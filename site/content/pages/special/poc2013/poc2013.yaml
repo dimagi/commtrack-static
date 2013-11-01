@@ -1,0 +1,45 @@
+slug: 'poc/commtrack'
+css_id: "poc"
+
+section_id: "download_commtrack_poc"
+
+title: "Request for Applications"
+section: "CommTrack: Mobile Logistics Proof of Concept<br /> in India and Nepal"
+
+issuance_date: 'October 21, 2013'
+application_closing_date: 'Dec 23, 2013 by 11:59 pm GMT'
+applications_closed: false
+closed_message: 'Feel free to email us at <a href="mailto:poc-applications@dimagi.com">poc-applications@dimagi.com</a> if you have any further questions.'
+
+main_logo: [
+  '/static-resources/images/poc/commtrack-logo.png', 
+  "CommTrack POC", 
+  "http://www.commtrack.org/home/"
+]
+
+sponsor_logos: [
+  [
+    '/static-resources/images/announcements/dimagi-color.png', 
+    'Dimagi, Inc.', 
+    'http://www.dimagi.com/'
+  ], 
+  [
+    '/static-resources/images/announcements/usaid.png', 
+    'USAID', 
+    'http://www.usaid.gov/'
+  ]
+]
+  
+analytics_action: "Commtrack POC Application Downloaded"
+
+application:
+  link: "/forms/poc/commtrack/"
+  text: "Apply Now"
+
+left_sections: [
+  'documents', 
+  'resources'
+]
+
+right_sections: []
+    

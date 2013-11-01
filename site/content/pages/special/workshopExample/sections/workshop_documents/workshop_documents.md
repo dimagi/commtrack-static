@@ -1,2 +1,0 @@
-- [Application](/docs/workshops/2013mumbai/CommCare_Workshop_Application.doc)
-- [Worksheet](/docs/workshops/2013mumbai/CommCare_Worksheet_Definition.doc)
