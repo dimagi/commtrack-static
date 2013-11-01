@@ -1,5 +1,5 @@
 <% if @item[:main_logo] %>
-<section class="sponsors">
+<div class="sponsors container clearfix">
 	<h1><a href="<%= @item[:main_logo][2] %>"><img src="<%= @item[:main_logo][0] %>" alt="<%= @item[:main_logo][1] %>" /></a></h1>
 	<% if @item[:sponsor_logos] %>
 	<h2>
@@ -8,59 +8,53 @@
 		<% end %>
 	</h2>
 	<% end %>
-</section>
-<% end %>
-<nav>
-	<% get_sections(@item, @item[:left_sections]).each do |sec| %>
-	  <%= render '_special-section', :item => sec %>
-	<% end %>
-</nav>
-<div class="main-content">
-	<hgroup>
-		<h1><%= @item[:title] %></h1>
-		<h2><%= @item[:section] %></h2>
-	</hgroup>
-	
-	<% if @item[:application] %>
-	<div class="download-rfa">
-		<a href="<%= @item[:application][:link] %>" class="button" <% if use_analytics %><%= track_event('RFA', @item[:analytics_action], @item[:section_id]) %><% end %>>
-		   <i class="icon-rfa"></i> 
-		   <span><%=@item[:application][:text]%></span>
-		</a>
-	</div>
-	<% end %>
-	
-	<% if @item[:workshop] and not @item[:applications_closed] %>
-	<div class="apply-for-workshop">
-		<a href="<%= @item[:workshop][:link] %>" class="button" <% if use_analytics %><%= track_event('Workshops', @item[:analytics_action], @item[:section_id]) %><% end %>><%= @config[:workshop][@item[:locale]][:apply_button]%></a>
-		<p><%= @config[:workshop][@item[:locale]][:send_application_notice]%> <strong><%=@item[:workshop][:due_date]%></strong>.</p>
-	</div>
-	<% end %>
-	
-	<% if @item[:right_sections] %>
-	<aside>
-		<% get_sections(@item, @item[:right_sections]).each do |sec| %>
-			<div><%= render '_special-section', :item => sec %></div>
-		<% end %>
-	</aside>
-	<% end %>
-	
-	<% if @item[:issuance_date] %>
-	<dl>
-		<dt><%= @config[:poc][@item[:locale]][:issuance_date]%>:</dt>
-		<dd><%= @item[:issuance_date] %></dd>
-		<dt><%= @config[:poc][@item[:locale]][:closing_date]%>:</dt>
-		<dd><%= @item[:application_closing_date] %></dd>
-	</dl>
-	<% end %>
-	
-	<% if @item[:applications_closed] %>
-	<div class="notice">
-		<p><strong>Note:</strong> The application deadline has passed. Applications are now closed. Thank you to all who sent in applications!</p>
-		<p><%= @item[:closed_message] %></p>
-	</div>
-	<% end %>
-	
-	<%=yield%>
 </div>
-
+<% end %>
+<div class="container">
+  <div class="row">
+    <nav class="span3">
+    	<% get_sections(@item, @item[:left_sections]).each do |sec| %>
+    	  <%= render '_special-section', :item => sec %>
+    	<% end %>
+    </nav>
+    <div class="span9">
+    	<hgroup>
+    		<h1><%= @item[:title] %></h1>
+    		<h2><%= @item[:section] %></h2>
+    	</hgroup>
+    	
+    	<% if @item[:application] %>
+    	<div class="pull-right">
+    		<a href="<%= @item[:application][:link] %>" class="btn btn-primary btn-large" <% if use_analytics %><%= track_event('RFA', @item[:analytics_action], @item[:section_id]) %><% end %>>
+    		   <%=@item[:application][:text]%>
+    		</a>
+    	</div>
+    	<% end %>
+    	
+    	<% if @item[:right_sections] %>
+    	<aside>
+    		<% get_sections(@item, @item[:right_sections]).each do |sec| %>
+    			<div><%= render '_special-section', :item => sec %></div>
+    		<% end %>
+    	</aside>
+    	<% end %>
+    	
+    	<% if @item[:issuance_date] %>
+    	<dl class="dates">
+    		<dt><%= @config[:poc][@item[:locale]][:issuance_date]%>:</dt>
+    		<dd><%= @item[:issuance_date] %></dd>
+    		<dt><%= @config[:poc][@item[:locale]][:closing_date]%>:</dt>
+    		<dd><%= @item[:application_closing_date] %></dd>
+    	</dl>
+    	<% end %>
+    	
+    	<% if @item[:applications_closed] %>
+    	<div class="notice">
+    		<p><strong>Note:</strong> The application deadline has passed. Applications are now closed. Thank you to all who sent in applications!</p>
+    		<p><%= @item[:closed_message] %></p>
+    	</div>
+    	<% end %>
+    	
+    	<%=yield%>
+    </div>
+</div>
