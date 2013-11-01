@@ -71,6 +71,18 @@ compile '/pages/special/*' do
   filter :erb
 end
 
+compile '/pages/forms/*/*' do
+  filter :kramdown
+  filter :erb
+  layout 'forms'
+  layout 'base'
+end
+
+compile '/pages/forms/*' do
+  filter :kramdown
+  filter :erb
+end
+
 compile '/pages/(home|plans|services|features|users)/*' do
   filter :kramdown
   filter :erb
@@ -120,11 +132,11 @@ route '/pages/*/sections/*' do
     # nothing
 end
 
-route '/pages/(special)/*/*' do 
+route '/pages/(special|forms)/*/*' do 
   get_page_url(@item) + "index.html"
 end
 
-route '/pages/(special)/*' do 
+route '/pages/(special|forms)/*' do 
   # nothing
 end
 
