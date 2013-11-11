@@ -19,11 +19,11 @@ pricing_table: [
       "Enterprise <span>(Coming Soon)</span>"
     ],
     hover_text: [
-      "For projects in a pilot phase with a small group (up to 50) of mobile users that only need very basic CommCare features.",
-      "For projects with a medium set (up to 250) of mobile users that want to build in limited SMS workflows and have increased data security needs.",
-      "For projects with a large group (up to 500) of mobile users that want to build in comprehensive SMS workflows and have increased reporting needs.",
-      "For projects scaling to an even larger group (up to 1,000) of mobile users that want the full CommCare feature set and dedicated support from Dimagi staff.",
-      "For projects scaling regionally or country wide (1,001+ people) that require the full CommCare feature set. Your organization will receive discounted pricing and dedicated enterprise-level support from Dimagi."
+      "For projects in a pilot phase with a small group (up to 50) of facilities that only need very basic CommTrack features.",
+      "For projects with a medium set (up to 250) of facilities that want to build in limited SMS workflows and have increased data security needs.",
+      "For projects with a large group (up to 500) of facilities that want to build in comprehensive SMS workflows and have increased reporting needs.",
+      "For projects scaling to an even larger group (up to 1,000) of facilities that want the full CommTrack feature set and dedicated support from Dimagi staff.",
+      "For projects scaling regionally or country wide (1,001+ facilities) that require the full CommTrack feature set. Your organization will receive discounted pricing and dedicated enterprise-level support from Dimagi."
     ]
   },
   {
@@ -37,7 +37,7 @@ pricing_table: [
     ]
   },
   {
-    title: "Mobile User Limit",
+    title: "Maximum Number of Facilities",
     editions: [
       "50",
       "250",
@@ -99,7 +99,7 @@ pricing_table: [
     link: "https://wiki.commcarehq.org/display/commcarepublic/CommCare+Plan+Details#CommCarePlanDetails-Web",
     details: [
       {
-        title: "CommCare Application Builder",
+        title: "CommTrack Application Builder",
         editions: [true, true, true, true, true]
       },
       {
