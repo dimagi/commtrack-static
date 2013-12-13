@@ -15,7 +15,7 @@ def production():
     env.root = root = '/opt/commtrack-static'
     env.site_root   = _join(root, 'site')
     env.sudo_user = 'cchq'
-    env.hosts = ['hqproxy0.internal.commcarehq.org']
+    env.hosts = ['hqproxy0.internal.commcarehq.org', 'hqproxy2.internal.commcarehq.org']
     env.environment = 'production'
     env.user = prompt("Username: ", default=env.user)
 
