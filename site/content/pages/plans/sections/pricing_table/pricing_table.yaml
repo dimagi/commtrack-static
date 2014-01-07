@@ -167,7 +167,7 @@ pricing_table: [
         editions: [false, true, true, true, true]
       },
       {
-        title: "Bulk User Management",
+        title: "Bulk Case and User Management",
         editions: [false, true, true, true, true]
       },
       {
