@@ -86,7 +86,7 @@ pricing_table: [
       },
       {
         title: "Included Messages (Dimagi Gateway)**",
-        editions: [~, "250 /month", "1,000 /month", "2,000 /month", "Unlimited"]
+        editions: [~, "250 /month", "500 /month", "1,000 /month", "2,000 /month"]
       },
       {
         title: "Included Messages (Your Gateway)***",
