@@ -1,5 +1,3 @@
-<% pricing_table = get_sections(@item, ["pricing_table"]) %>
-
 <div class="article-header">
 	<hgroup class="container">
 	  <div class="row">
@@ -8,20 +6,99 @@
         <h2><%= html_escape(@item[:desc]) %></h2>
       </div>
       <div class="span4" style="text-align: right;">
-        <img src="/<%=@config[:static_loc]%>/images/plans/header-plans.png" alt="CommCare HQ Plans" />
+        <img src="/<%=@config[:static_loc]%>/images/plans/header-plans.png" alt="CommTrack Plans" />
       </div>
 	  </div>
 	</hgroup>
 </div>
 <div class="container">
 		<%= yield %>
-		<%= render '_table-pricing', :pricing => pricing_table[0] %>
-		
-		<% if pricing_table[0][:footnotes] %>
-		<ul class="pricing-footnotes">
-		<% pricing_table[0][:footnotes].each do |footnote| %>
-		  <li class="muted"><%=footnote%></li>	
-		<% end %>
-		</ul>
-		<% end %>
+		<div class="alert alert-info" id="fetching-alert">
+      <%= @item[:fetching_pricing] %>
+    </div>
+		<article id="pricing-table" class="hide">
+        <table class="table-pricing">
+            <thead>
+                <tr>
+                    <td></td>
+                    <th class="th-feature"><h1 data-bind="text: title" style="font-size: 1.5em; margin: 0;"></h1></th>
+                    <!-- ko foreach: editions -->
+                    <th data-bind="attr: {class: col_css, 'data-edition': slug}">
+                        <div class="edition-heading" data-bind="attr: {'data-title': description}">
+                            <span data-bind="text: name"></span>
+                            <i class="icon-info-sign corner-icon"></i>
+                        </div>
+                    </th>
+                    <!-- /ko -->
+                </tr>
+            </thead>
+            <!-- ko foreach: sections -->
+            <tbody data-bind="foreach: features, attr: { class: tbody_css }">
+                <tr>
+                    <!-- ko if: $index() == 0 && $parent.show_header() -->
+                    <th class="th-feature-section" data-bind="attr: {rowspan: $parent.features().length}">
+                        <h2 style="margin: 0;">
+                            <a data-bind="attr: {href: $parent.url}" target="_blank">
+                                <span data-bind="text: $parent.title"></span>
+                                <i class="icon-info-sign"></i>
+                                <span class="learn-more" data-bind="text: $root.visit_wiki_text"></span>
+                            </a>
+                        </h2>
+                    </th>
+                    <!-- /ko -->
+                    <!-- ko ifnot: $parent.show_header -->
+                    <td></td>
+                    <!-- /ko -->
+                    <th class="th-feature" data-bind="html: title"></th>
+                    <!-- ko foreach: columns -->
+                    <td data-bind="html: content_html,
+                        attr: {class: col_css, 'data-edition': edition}"></td>
+                    <!-- /ko -->
+                </tr>
+            </tbody>
+            <!-- /ko -->
+            <tfoot>
+                <td colspan="2">
+                    <div></div>
+                </td>
+                <!-- ko foreach: editions -->
+                <th data-bind="text: name, attr: {class: col_css, 'data-edition': slug}"></th>
+                <!-- /ko -->
+            </tfoot>
+        </table>
+        <ul class="pricing-footnotes" data-bind="foreach: footer">
+            <li data-bind="html: $data"></li>
+        </ul>
+    </article>
+    <div class="alert alert-error hide" id="error-fetching-table">
+      <%= @item[:error_fetching_pricing] %>
+    </div>
+		<script>
+		    $(function () {
+		      var attempts = 2;
+  		    var getPricingData = function () {
+  		      $.ajax({
+      		    url: '<%= @item[:pricing_table_api_url] %>',
+      		    type: 'post',
+      		    success: function (data) {
+        		    var pricingTable = new PricingTable(data, 'community');
+                ko.applyBindings(pricingTable, $('#pricing-table').get(0));
+                pricingTable.init();
+                $('#fetching-alert').addClass('hide');
+                $('#pricing-table').removeClass('hide');
+      		    },
+      		    error: function (data) {
+        		    if (attempts > 0) {
+          		    $('#error-fetching-table').removeClass('hide');
+                  $('#fetching-alert').addClass('hide');
+        		    } else {
+          		    getPricingData();
+        		    }
+        		    attempts += 1;  
+      		    }
+    		    });
+    		  };
+    		  getPricingData();
+		    });
+    </script>
 </div>

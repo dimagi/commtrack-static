@@ -16,6 +16,9 @@
     <link href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700|Raleway:200,400,500,700" rel="stylesheet" type="text/css" />
     <link href="/<%= @config[:static_loc] %>/style/main.css?v=2.3.2" rel="stylesheet" type="text/css" media="screen" />
     <link rel="icon" type="image/png" href="/<%= @config[:static_loc] %>/images/favicons/favicon.png" />
+    <% if @item.identifier.include? 'plans' %>
+      <link rel="stylesheet" href="http://www.commcarehq.org/static/accounting/style/table-pricing.css?v=1"/>
+    <% end %>
     
     <!--[if IE]>
     <link rel="shortcut icon" href="/<%= @config[:static_loc] %>/images/favicons/favicon.ico" />
@@ -106,6 +109,12 @@
     <% if @item.identifier.include? 'home' %>
     <script type="text/javascript" src="/<%= @config[:static_loc] %>/js/jquery-ui-1.8.23.custom.min.js?v=1"></script>
     <% end %>  
+    
+    <% if @item.identifier.include? 'plans' %>
+      <script type="text/javascript" src="http://www.commcarehq.org/static/hqwebapp/js/lib/knockout-2.1.0.js"></script>
+      <script type="text/javascript" src="http://www.commcarehq.org/static/hqwebapp/js/lib/underscore-1.4.4.js"></script>
+      <script type="text/javascript" src="http://www.commcarehq.org/static/accounting/ko/accounting.pricing_table.js"></script>
+    <% end %>
            
   </body>
 </html>
