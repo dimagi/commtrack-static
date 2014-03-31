@@ -11,11 +11,11 @@ tour:
   credentials: [
     {
       text: "Username",
-      value: "commtrackdemo@gmail.com"
+      value: "commtrack.tour@gmail.com"
     },
     {
       text: "Password",
-      value: "demo"
+      value: "tour"
     }
   ]
   
