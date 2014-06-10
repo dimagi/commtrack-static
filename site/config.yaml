@@ -91,12 +91,12 @@ nav_dropdowns:
     en: "Pricing"
     
 announcements: [
-  {
-    en: {
-      link: '/poc/commtrack/',
-      text: "<strong>Request for Applications:</strong> CommTrack Proof of Concept: Free Phones and Technical Support"
-      }
-  }
+#   {
+#     en: {
+#       link: '/poc/commtrack/',
+#       text: "<strong>Request for Applications:</strong> CommTrack Proof of Concept: Free Phones and Technical Support"
+#       }
+#   }
 ]
 
 copyright_text:
