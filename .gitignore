@@ -25,3 +25,4 @@ site/content/robots.txt
 *.pyc
 
 .idea/
+site/crash.log
