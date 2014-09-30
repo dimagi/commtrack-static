@@ -14,10 +14,9 @@ def production():
     """ use production environment on remote host"""
     env.root = root = '/opt/commtrack-static'
     env.site_root   = _join(root, 'site')
-    env.sudo_user = 'cchq'
-    env.hosts = ['hqproxy0.internal.commcarehq.org', 'hqproxy2.internal.commcarehq.org']
+    env.user = 'cchq'
+    env.hosts = ['hqproxy3.internal.commcarehq.org']
     env.environment = 'production'
-    env.user = prompt("Username: ", default=env.user)
 
 def deploy():
     """ deploy code to remote host by checking out the latest via git """
@@ -27,10 +26,8 @@ def deploy():
             utils.abort('Production deployment aborted.')
 
     with cd(env.root):
-        sudo('git pull origin master', user=env.sudo_user)
-        sudo('git submodule update --init --recursive', user=env.sudo_user)
+        run('git pull origin master')
+        run('git submodule update --init --recursive')
 
     with cd(env.site_root):
-    	sudo('rm -r output', user=env.sudo_user)
-    	sudo('rm -r tmp', user=env.sudo_user)
-    	sudo('nanoc compile', user=env.sudo_user)
+      run('nanoc compile')
