@@ -12,24 +12,24 @@ applications_closed: false
 closed_message: 'Feel free to email us at <a href="mailto:poc-applications@dimagi.com">poc-applications@dimagi.com</a> if you have any further questions.'
 
 main_logo: [
-  '/static-resources/images/poc/commtrack-logo.png', 
-  "CommTrack POC", 
+  '/static-resources/images/poc/commtrack-logo.png',
+  "CommTrack POC",
   "http://www.commtrack.org/home/"
 ]
 
 sponsor_logos: [
   [
-    '/static-resources/images/announcements/dimagi-color.png', 
-    'Dimagi, Inc.', 
+    '/static-resources/images/announcements/dimagi-color.png',
+    'Dimagi, Inc.',
     'http://www.dimagi.com/'
-  ], 
+  ],
   [
-    '/static-resources/images/announcements/usaid.png', 
-    'USAID', 
+    '/static-resources/images/announcements/usaid.png',
+    'USAID',
     'http://www.usaid.gov/'
   ]
 ]
-  
+
 analytics_action: "Commtrack POC Application Downloaded"
 
 application:
@@ -37,9 +37,13 @@ application:
   text: "Apply Now"
 
 left_sections: [
-  'documents', 
+  'documents',
   'resources'
 ]
 
 right_sections: []
-    
+
+
+locale:
+  fr:
+    slug: 'poc/commtrack'

@@ -1,65 +1,64 @@
-<% locale = 'en'.to_sym %>
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7" lang="<%= locale %>"> <![endif]-->
-<!--[if IE 7]>         <html class="lt-ie9 lt-ie8" lang="<%= locale %>"> <![endif]-->
-<!--[if IE 8]>         <html class="lt-ie9" lang="<%= locale %>"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="<%= locale %>"> <!--<![endif]-->
+<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7" lang="<%= @item[:locale] %>"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8" lang="<%= @item[:locale] %>"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9" lang="<%= @item[:locale] %>"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="<%= @item[:locale] %>"> <!--<![endif]-->
   <head>
     <meta charset="UTF-8" />
     <title><% if @item[:title] %><%= @item[:title] %> - <% end %>CommTrack</title>
-        
-    <meta name="description" content="<%= @config[:meta][:description][locale] %>">
+
+    <meta name="description" content="<%= @config[:meta][:description][:locale] %>">
     <meta name="author" content="Dimagi, Inc.">
-    <meta name="keywords" content="CommTrack, Comm Track, CommCare ODK, CommCareHQ, CommCareODK, Dimagi, <%= @config[:meta][:keywords][locale] %>">
+    <meta name="keywords" content="CommTrack, Comm Track, CommCare ODK, CommCareHQ, CommCareODK, Dimagi, <%= @config[:meta][:keywords][:locale] %>">
     <meta name="viewport" content="width=980,initial-scale=1">
-        
+
     <link href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700|Raleway:200,400,500,700" rel="stylesheet" type="text/css" />
     <link href="/<%= @config[:static_loc] %>/style/main.css?v=2.3.2" rel="stylesheet" type="text/css" media="screen" />
     <link rel="icon" type="image/png" href="/<%= @config[:static_loc] %>/images/favicons/favicon.png" />
     <% if @item.identifier.include? 'plans' %>
       <link rel="stylesheet" href="http://www.commcarehq.org/static/accounting/style/table-pricing.css?v=1"/>
     <% end %>
-    
+
     <!--[if IE]>
     <link rel="shortcut icon" href="/<%= @config[:static_loc] %>/images/favicons/favicon.ico" />
     <link href="/<%= @config[:static_loc] %>/style/ie_fixes.css" rel="stylesheet" type="text/css" media="screen" />
     <script type="text/javascript" src="/<%= @config[:static_loc] %>/js/modernizr.custom.79433.js"></script>
     <![endif]-->
-    
+
     <script type="text/javascript" src="/<%= @config[:static_loc] %>/js/jquery-1.8.2.min.js?v=1"></script>
     <script type="text/javascript" src="/<%= @config[:static_loc] %>/js/jquery.history.js?v=1"></script>
     <script type="text/javascript" src="/<%= @config[:static_loc] %>/js/bootstrap.min.js?v=1"></script>
-        
+
   </head>
-  <body class="lang-<%=locale%>">
+  <body class="lang-<%=@item[:locale]%>">
     <header>
       <div class="container">
         <hgroup>
             <h1>
-              <a href="<%=@config[:data_sources][0][:config][:locale][:availables][locale][:home]%>">
+              <a href="<%=@config[:data_sources][0][:config][:locale][:availables][@item[:locale]][:home]%>">
                 <img src="/<%= @config[:static_loc] %>/images/commtrack-square.png" alt="CommTrack" />
               </a>
             </h1>
-            <h2><a href="http://dimagi.com/"><img src="/<%= @config[:static_loc] %>/images/powered-by-dimagi.png" alt="<%=@config[:global_text][:powered_by_dimagi][locale] %>" /></a></h2>
+            <h2><a href="http://dimagi.com/"><img src="/<%= @config[:static_loc] %>/images/powered-by-dimagi.png" alt="<%=@config[:global_text][:powered_by_dimagi][@item[:locale]] %>" /></a></h2>
         </hgroup>
         <nav>
             <ul>
                 <%= build_navigation(['home', 'features', 'users', 'support', ['pricing', ['plans', 'services']]], @item) %>
                 <li class="extras">
-                  <a class="btn btn-primary" href="/accounts/login/commtrack" <% if use_analytics %><%= track_event('Sign In', 'Top Blue Button', 'Nav Bar') %><% end %>><%=@config[:global_text][:sign_in][locale] %></a>
+                  <a class="btn btn-primary" href="/accounts/login/commtrack" <% if use_analytics %><%= track_event('Sign In', 'Top Blue Button', 'Nav Bar') %><% end %>><%=@config[:global_text][:sign_in][@item[:locale]] %></a>
                 </li>
             </ul>
         </nav>
       </div>
-    </header>   
+    </header>
         <% if (@config[:announcements]) %>
         <aside class="announcement">
            <% @config[:announcements].each do |announcement| %>
-           <a href="<%= announcement[locale][:link] %>">
+           <a href="<%= announcement[@item[:locale]][:link] %>">
  	        	<span>
- 	        		<%= announcement[locale][:text] %>
+ 	        		<%= announcement[@item[:locale]][:text] %>
  	        	</span>
-         	</a>	
+         	</a>
          	<% end %>
         </aside>
         <% end %>
@@ -74,7 +73,7 @@
               <div class="span3">
                 <a href="http://www.dimagi.com/" class="right-image"><img src="/<%= @config[:static_loc] %>/images/dimagi-white-logo.png" alt="Dimagi" /></a>
               </div>
-              <% @config[:footer_links][locale].each do |section| %>
+              <% @config[:footer_links][@item[:locale]].each do |section| %>
               <section class="span3">
                 <h2><a href="<%=section[:link]%>"><%=section[:title]%></a></h2>
                 <ul class="unstyled">
@@ -85,36 +84,36 @@
               </section>
               <% end %>
             </div>
-            
-            <p class="text-center" style="margin-top: 20px;"><%=@config[:copyright_text][locale]%> &copy; <%= Time.now.year %> Dimagi, Inc. | <a href="/eula">End User License Agreement</a> | <a href="http://www.dimagi.com/policy">Privacy</a></p>
+
+            <p class="text-center" style="margin-top: 20px;"><%=@config[:copyright_text][:locale]%> &copy; <%= Time.now.year %> Dimagi, Inc. | <a href="/eula">End User License Agreement</a> | <a href="http://www.dimagi.com/policy">Privacy</a></p>
           </div>
         </footer>
 
     <% ### Scripts %>
-    
+
     <% if use_analytics %>
     <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', '<%=google_analytics_account %>']);
       _gaq.push(['_trackPageview']);
-    
+
       (function() {
         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
     </script>
-    <% end %> 
-    
+    <% end %>
+
     <% if @item.identifier.include? 'home' %>
     <script type="text/javascript" src="/<%= @config[:static_loc] %>/js/jquery-ui-1.8.23.custom.min.js?v=1"></script>
-    <% end %>  
-    
+    <% end %>
+
     <% if @item.identifier.include? 'plans' %>
       <script type="text/javascript" src="http://www.commcarehq.org/static/hqwebapp/js/lib/knockout-2.1.0.js"></script>
       <script type="text/javascript" src="http://www.commcarehq.org/static/hqwebapp/js/lib/underscore-1.4.4.js"></script>
       <script type="text/javascript" src="http://www.commcarehq.org/static/accounting/ko/accounting.pricing_table.js"></script>
     <% end %>
-           
+
   </body>
 </html>

@@ -10,3 +10,16 @@ compare_button: "Compare Plans"
 compare_heading: "Compare CommTrack Plans"
 
 css_id: services
+
+locale:
+  fr:
+    slug: services
+    sections: ['pricing_table']
+
+    title:    'Services'
+    short_title: "Services"
+    heading:  'Discover CommTrack Support & Services.'
+    desc:     "Our field managers & analysts are here to help."
+
+    compare_button: "Compare Plans"
+    compare_heading: "Compare CommTrack Plans"

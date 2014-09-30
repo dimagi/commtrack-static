@@ -18,7 +18,7 @@ tour:
       value: "tour"
     }
   ]
-  
+
 why_commtrack:
   text: "Why CommTrack?"
   reasons: [
@@ -53,7 +53,7 @@ why_commtrack:
       desc: "Use images, audio, and video to engage audiences and deliver dynamic educational materials."
     }
   ]
-      
+
 
 contact_us: "Contact Us"
 
@@ -65,8 +65,82 @@ contact_us_form:
     last_name: "Last Name"
     company: "Company"
     email: "Email Address"
-  required_blob: 
+  required_blob:
     description: "What is your interest in CommTrack and any specific questions you have?"
   optional_fields:
     phone: "Phone Number"
     00Nb0000002JJXA: "Country"
+
+
+locale:
+  fr:
+    slug: accueil
+    title: "A tool for mobile logistics and supply chain management."
+    short_title: "Accueil"
+
+    tour:
+      text: "Take a tour of CommTrack, with the following credentials"
+      start_tour: "Start Tour"
+      tour_commtrack: "Tour CommTrack"
+      credentials: [
+        {
+          text: "Username",
+          value: "commtrack.tour@gmail.com"
+        },
+        {
+          text: "Password",
+          value: "tour"
+        }
+      ]
+
+    why_commtrack:
+      text: "Why CommTrack?"
+      reasons: [
+        {
+          title: "Data-Driven Decision-Making",
+          icon: "icon-cloud",
+          desc: "Improved, real-time visibility into supply and demand indicators and improved transparency and accountability."
+        },
+        {
+          title: "Streamline Requisitions and Delivery",
+          icon: "icon-truck",
+          desc: "Address and resolve stockouts faster."
+        },
+        {
+          title: "Intelligent Forecasting",
+          icon: "icon-bar-chart",
+          desc: "Automatically infer consumption rates, resupply levels, and impending stockouts."
+        },
+        {
+          title: "Quality",
+          icon: "icon-trophy",
+          desc: "Improve stock management practice and storage conditions through targeted checklists."
+        },
+        {
+          title: "Reduced Losses and Expirations",
+          icon: "icon-money",
+          desc: "Improve tracking and accounting of resources, clients, and vendors."
+        },
+        {
+          title: "Demand Creation",
+          icon: "icon-picture",
+          desc: "Use images, audio, and video to engage audiences and deliver dynamic educational materials."
+        }
+      ]
+
+
+    contact_us: "Contact Us"
+
+    contact_us_form:
+      title: "Contact CommTrack"
+      submit_button: "Contact Us"
+      required_fields:
+        first_name: "First Name"
+        last_name: "Last Name"
+        company: "Company"
+        email: "Email Address"
+      required_blob:
+        description: "What is your interest in CommTrack and any specific questions you have?"
+      optional_fields:
+        phone: "Phone Number"
+        00Nb0000002JJXA: "Country"

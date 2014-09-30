@@ -33,9 +33,9 @@ data_sources:
             name: "English"
             home: "/home/"
             default: true
-#           fr:
-#             name: "Français"
-#             home: "/fr/accueil/"
+          fr:
+            name: "Français"
+            home: "/fr/accueil/"
 #           es:
 #             name: "Español"
 #             home: "/es/home/"
@@ -64,8 +64,10 @@ watcher:
   # When to send notifications (using Growl or notify-send).
   notify_on_compilation_success: true
   notify_on_compilation_failure: true
-  
+
 default_locale: 'en'
+
+lang_tabs: ['en', 'fr']
 
 static_loc: 'static-resources'
 
@@ -77,22 +79,31 @@ static_loc: 'static-resources'
 meta:
   description:
     en: "Need Desc"
-  keywords: 
+    fr: "Need Desc"
+  keywords:
     en: "todo"
-    
+    fr: "todo"
+
 global_text:
   powered_by_dimagi:
     en: "Powered by Dimagi"
+    fr: "Powered by Dimagi"
   sign_in:
     en: "Sign In"
-    
+    fr: "Sign In"
+
 nav_dropdowns:
   pricing:
     en: "Pricing"
-    
+    fr: "Pricing"
+
 announcements: [
 #   {
 #     en: {
+#       link: '/poc/commtrack/',
+#       text: "<strong>Request for Applications:</strong> CommTrack Proof of Concept: Free Phones and Technical Support"
+#       },
+#      fr: {
 #       link: '/poc/commtrack/',
 #       text: "<strong>Request for Applications:</strong> CommTrack Proof of Concept: Free Phones and Technical Support"
 #       }
@@ -101,14 +112,21 @@ announcements: [
 
 copyright_text:
   en: "Copyright"
-  
+  fr: "Copyright"
+
 poc:
   en:
     issuance_date: "Issuance Date"
     closing_date: "Application Closing Date"
-    
+  fr:
+    issuance_date: "Issuance Date"
+    closing_date: "Application Closing Date"
+
 workshop:
   en:
+    apply_button: "Apply for Workshop"
+    send_application_notice: "Send us any questions you might have or your application by"
+  fr:
     apply_button: "Apply for Workshop"
     send_application_notice: "Send us any questions you might have or your application by"
 
@@ -148,7 +166,59 @@ footer_links:
           title: "Early Warning System (Ghana)",
           link: "/users/#cs-ews"
         }
-      ] 
+      ]
+    },
+    {
+      title: "Support",
+      link: "/support/",
+      items: [
+        {
+          title: "Users",
+          link: "/support/#for-users"
+        },
+        {
+          title: "Contact Us",
+          link: "http://groups.google.com/group/commtrack-users"
+        }
+      ]
+    }
+  ]
+  fr: [
+    {
+      title: "Dimagi",
+      link: "http://www.dimagi.com/",
+      items: [
+        {
+          title: "Dimagi Home",
+          link: "http://www.dimagi.com/"
+        },
+        {
+          title: "About Us",
+          link: "http://www.dimagi.com/about/"
+        },
+        {
+          title: "Contact Us",
+          link: "http://www.dimagi.com/collaborate/contact-us/"
+        }
+      ]
+    },
+    {
+      title: "Case Studies",
+      link: "/users/",
+      items: [
+        {
+          title: "cStock (Malawi)",
+          link: "/users/#cs-cstock"
+        },
+        {
+          title: "ILSGateway (Tanzania)",
+          link: "/users/#cs-ilsgateway"
+        },
+        {
+          title: "Early Warning System (Ghana)",
+          link: "/users/#cs-ews"
+        }
+      ]
     },
     {
       title: "Support",

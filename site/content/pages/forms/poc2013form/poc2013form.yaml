@@ -1,1 +1,5 @@
 slug: 'forms/poc/commtrack'
+
+locale:
+  fr:
+    slug: 'forms/poc/commtrack'
