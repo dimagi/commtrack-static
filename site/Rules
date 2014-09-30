@@ -15,7 +15,7 @@
 
 ###### Compiling #######
 
-# :fi # lesystem_i18n.layout
+:fi # lesystem_i18n.layout
 
 compile '/stylesheets/*' do
   filter :less
@@ -36,18 +36,11 @@ preprocess do
   end
 end
 
-compile '/pages/users/subpage/*' do 
+compile '/*/pages/users/subpage/*' do
   filter :kramdown
-  filter :erb
-  layout 'carousel'
-  layout 'base'
 end
 
-route '/*/pages/(tour|users)/subpage/*' do 
-  get_page_url(@item) + item[:sub_slug] + "/index.html"
-end
-
-compile '/pages/*/sections/*' do
+compile '/*/pages/*/sections/*' do
   filter :kramdown
 end
 
@@ -59,38 +52,38 @@ end
 #   layout 'base'
 # end
 
-compile '/pages/special/*/*' do
+compile '/*/pages/special/*/*' do
   filter :kramdown
   filter :erb
   layout 'special'
   layout 'base'
 end
 
-compile '/pages/special/*' do
+compile '/*/pages/special/*' do
   filter :kramdown
   filter :erb
 end
 
-compile '/pages/forms/*/*' do
+compile '/*/pages/forms/*/*' do
   filter :kramdown
   filter :erb
   layout 'forms'
   layout 'base'
 end
 
-compile '/pages/forms/*' do
+compile '/*/pages/forms/*' do
   filter :kramdown
   filter :erb
 end
 
-compile '/pages/(home|plans|services|features|users)/*' do
+compile '/*/pages/(home|plans|services|features|users)/*' do
   filter :kramdown
   filter :erb
   layout item.identifier.split('/')[-1]
   layout 'base'
 end
 
-compile '/pages/*' do
+compile '/*/pages/*' do
   filter :kramdown
   filter :erb
   layout 'generic'
@@ -112,7 +105,7 @@ route '/static/*' do
   item.identifier[7..-2]
 end
 
-route '/robots' do 
+route '/robots' do
   item.identifier.chop + '.txt'
 end
 
@@ -120,27 +113,23 @@ route '/stylesheets/*' do
   item.identifier.sub(%r{^/stylesheets}, "/#{@config[:static_loc]}/style").chop + '.css'
 end
 
-route '/scripts/*' do 
+route '/scripts/*' do
   item.identifier.sub(%r{^/scripts}, "/#{@config[:static_loc]}/js").chop + '.js'
 end
 
-route '/pages/(users)/subpage/*' do 
-  get_page_url(@item) + item[:sub_slug] + "/index.html"
-end
-
-route '/pages/*/sections/*' do 
+route '/*/pages/*/sections/*' do
     # nothing
 end
 
-route '/pages/(special|forms)/*/*' do 
+route '/*/pages/(special|forms)/*/*' do
   get_page_url(@item) + "index.html"
 end
 
-route '/pages/(special|forms)/*' do 
+route '/*/pages/(special|forms)/*' do
   # nothing
 end
 
-route '/pages/*' do 
+route '/*/pages/*' do
    get_page_url(@item) + "index.html"
 end
 

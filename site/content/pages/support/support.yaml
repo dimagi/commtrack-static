@@ -3,3 +3,9 @@ title: Resources & Support
 short_title: "Support"
 
 css_id: support
+
+locale:
+  fr:
+    slug: support
+    title: Resources & Support
+    short_title: "Support"
