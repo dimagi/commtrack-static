@@ -15,7 +15,10 @@ def production():
     env.root = root = '/opt/commtrack-static'
     env.site_root   = _join(root, 'site')
     env.user = 'cchq'
-    env.hosts = ['hqproxy3.internal.commcarehq.org']
+    env.hosts = [
+      'hqproxy0.internal.commcarehq.org',
+      'hqproxy3.internal.commcarehq.org',
+    ]
     env.environment = 'production'
 
 def deploy():
