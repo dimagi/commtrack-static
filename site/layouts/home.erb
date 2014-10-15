@@ -7,9 +7,7 @@
 	<div class="container">
 	  <p class="actionable">
       <a href="#contact-us" data-toggle="modal" class="btn btn-primary btn-large"><%=@item[:contact_us]%></a>
-      <span class="divider"></span>
-      <button class="btn btn-success btn-large" id="tour-commtrack"><%=@item[:tour][:tour_commtrack]%></button>
-    </p> 
+    </p>
 	</div>
 </div>
 
@@ -31,24 +29,3 @@
 <div class="modal hide fade" id="contact-us">
   <%= render '_home-contactus', :item => @item %>
 </div>
-
-<script>
-  $(function () {  
-    $('#tour-commtrack').popover({
-      html: true,
-      title: "<%=@item[:tour][:text]%>:",
-      content: $('#home-tour-blurb').text(),
-      placement: 'top'
-    })
-  });
-</script>
-
-<script type="text/template" id="home-tour-blurb">
-  <dl class="dl-horizontal dl-tour">
-  <% @item[:tour][:credentials].each do |cred| %>
-    <dt><%= cred[:text] %></dt>
-    <dd><%= cred[:value] %></dd>
-  <% end %>
-  </dl>
-  <p class="text-center"><a href="http://www.commtrack.org/accounts/login/commtrack" class="btn btn-success"><i class="icon-external-link-sign"></i> <%=@item[:tour][:start_tour]%></a></p>
-</script>
