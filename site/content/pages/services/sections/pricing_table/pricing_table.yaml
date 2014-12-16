@@ -102,77 +102,77 @@ locale:
         ]
       },
       {
-        title: "Cost",
+        title: "Coût",
         editions: [
-          "Free",
+          "Gratuit ",
           '$25,000',
           '$100,000'
         ]
       },
       {
-        title: "Included Software Plan (<a href='/plans/'>See Plans</a>)",
+        title: "Forfait de logiciel inclus (<a href='/plans/'>See Plans</a>)",
         editions: [
-          "Community Software Plan (FREE)",
-          '12 months of the Pro Software Plan',
-          '12 months of the Advanced Software Plan'
+          "Forfait de logiciel de communauté (GRATUIT) ",
+          '12 mois de Forfait de logiciel Pro',
+          '12 mois de Forfait de logiciel Avancé'
         ]
       },
       {
-        title: "Project Design & Deployment",
+        title: "Conception de projet et déploiement",
         details: [
           {
-            title: "Application Creation",
+            title: "Création de l'application",
             editions: [false, true, true]
           },
           {
-            title: "On-site application iteration and refinement by Field Engineer",
+            title: "Itération et affinage de l'application en ligne, par un ingénieur de terrain",
             editions: [false, true, true]
           },
           {
-            title: "Creation of Multimedia Content",
+            title: "Création de contenu multimédia",
             editions: [false, true, true]
           }
         ]
       },
       {
-        title: "Program Management",
+        title: "Gestion de programme",
         details: [
           {
-            title: "Active Data Management Support (12 months)",
-            editions: [false, "Available at additional Cost - $15,000", true]
+            title: "Aide pour Active Data Management (12 mois)",
+            editions: [false, "Disponible pour un coût supplémentaire - $15 000", true]
           },
           {
-            title: "Software Development for New Features and Reports (12 months)",
-            editions: [false, "Available at additional Cost - $25,000 per Block", "1 Block included"]
+            title: "Développement de logiciel de nouvelles fonctionnalités et rapports (12 mois)",
+            editions: [false, "Disponible pour un coût supplémentaire - $25 000 par période ", "1 période incluse"]
           },
           {
-            title: "Fully managed program implementation by Dimagi (12 months)",
+            title: "Mise en œuvre de programme entièrement gérée par Dimagi (12 mois)",
             editions: [false, false, true]
           },
           {
-            title: "In-Kind Dimagi Management Team Support for strategy, evaluation, and scale-up (12 months)",
+            title: "Aide matérielle de la part de l'équipe de gestion de Dimagi, pour la stratégie, l'évaluation et l'élargissement du déploiement (12 mois)",
             editions: [false, false, true]
           }
         ]
       },
       {
-        title: "Support & Maintenance",
+        title: "Aide et entretien",
         details: [
           {
-            title: "Access to Community Support",
+            title: "Accès à l'aide de la communauté",
             editions: [true, true, true]
           },
           {
-            title: "Direct e-mail support from Dimagi (12 months)",
+            title: "Aide directe via courriel de la part de Dimagi (12 mois)",
             editions: [false, true, true]
           },
           {
-            title: "Direct phone support from Dimagi (12 months)",
-            editions: [false, "Available through Field Engineer Support", true]
+            title: "Aide directe via téléphone de la part de Dimagi (12 mois)",
+            editions: [false, "Disponible via l'aide d'un ingénieur de terrain", true]
           },
           {
-            title: "Additional Field Engineer Support",
-            editions: [false, "Available at additional Cost - $15,000 Per Block", "2 Blocks included"]
+            title: "Aide supplémentaire d'un ingénieur de terrain",
+            editions: [false, "Disponible pour un coût supplémentaire - $15 000 par période ", "2 périodes incluses"]
           }
         ]
       }
