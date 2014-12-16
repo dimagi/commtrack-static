@@ -1,5 +1,5 @@
-## Compare Commtrack Plans
+## Comparez les forfaits de CommTrack
 
 {: .lead}
-Anyone can use CommTrack for **FREE** with up to 50 facilities.  To scale your project, choose a paid plan that will unlock advanced features and support more mobile workers.
+Tout le monde peut utiliser CommTrack GRATUITEMENT pour un total allant jusqu'à 50 sites. Pour étendre votre projet, choisissez un forfait planifié qui déverrouillera des fonctionnalités avancées et appuiera davantage de travailleurs mobiles.
 
