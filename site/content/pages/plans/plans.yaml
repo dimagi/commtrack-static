@@ -17,10 +17,10 @@ locale:
   fr:
     slug: plans
 
-    title: "Plans & Pricing"
-    short_title: "Plans"
-    heading: "Take CommTrack to the next level."
-    desc: "At a price that fits your needs."
+    title: "Abonnements et les tarifs"
+    short_title: "Abonnements"
+    heading: "Amenez CommTrack à se dépasser."
+    desc: "À un prix qui convient à vos besoins."
 
     pricing_table_api_url: "https://www.commcarehq.org/hq/accounting/pricing_table/CommTrack/en/"
 
