@@ -17,8 +17,8 @@ locale:
   fr:
     slug: plans
 
-    title: "Abonnements et les tarifs"
-    short_title: "Abonnements"
+    title: "Les forfaits de logiciel et de services"
+    short_title: "Les forfaits"
     heading: "Amenez CommTrack à se dépasser."
     desc: "À un prix qui convient à vos besoins."
 
