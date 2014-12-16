@@ -1,15 +1,15 @@
-## Compare Service Plans
+## Comparez les forfaits de services
 
-- ### CommTrack BASIC 
+- ### •	CommTrack BASIC 
 
-  #### You build, you manage.
-  For organizations doing a proof-of-concept evaluation or that have significant IT capabilities within their organization.  Free community support is available to help you get started.
+  #### Vous construisez, vous gérez.
+  Pour les organisations effectuant des évaluations de validation de concept ou qui disposent de ressources liées aux TI au sein de leur organisation. Une aide de la communauté gratuite est disponible, pour vous aider à démarrer.
 - ### CommTrack PLUS
 
-  #### We build, you manage.
-  For organizations who have staff they can dedicate to utilizing CommTrack in a deployment setting but do not have the IT capabilities to design and build the application.
+  #### Nous construisons, vous gérez.
+ Pour les organisations disposant de membres du personnel pouvant se consacrer à l'utilisation de CommTrack dans un contexte de déploiement, mais qui ne n'ont pas les ressources liées aux TI leur permettant de concevoir et construire l'application.
 - ### CommTrack FULL
 
-  #### We build, we manage.
-  For organizations who are doing a full scale deployment of CommTrack and want Dimagi to take an active role managing and improving the performance of the program. 
+  #### Nous construisons, nous gérons.
+  Pour les organisations qui effectuent un déploiement de CommTrack de pleine envergure et souhaitent que Dimagi joue un rôle actif dans la gestion et l'amélioration du rendement du programme. 
 {: .service-plans}
