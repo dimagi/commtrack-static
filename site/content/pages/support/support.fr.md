@@ -27,7 +27,7 @@ Pour en savoir davantage sur ICT et la gestion de chaîne d'approvisionnement en
   L'International Association of Public Health Logisticians.
 - [E-Drug](http://www.essentialdrugs.org/edrug/)  
   DRUG est utilisé par les professionnels de soins de santé, les chercheurs et les décideurs politiques afin d'obtenir et de discuter des informations actuelles concernant les médicaments, les politiques, les activités de programme, l'éducation et la formation.
-- [Lessons Learned](/static-resources/docs/LMIS/Lessons_Learned.pdf)
+- [Les leçons apprises](/static-resources/docs/LMIS/Lessons_Learned.pdf)
   •	Ce rapport constitue un résumé des expériences de Dimagi dans le cadre de son travail avec une gamme variée de ICTs d'accès libre pour les chaînes d'approvisionnement (ICT4SC) de milieux à ressources limitées, d'applications mobiles légères en passant par des systèmes d'informations simples.
 
 
