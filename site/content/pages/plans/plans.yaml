@@ -24,5 +24,5 @@ locale:
 
     pricing_table_api_url: "https://www.commcarehq.org/hq/accounting/pricing_table/CommTrack/en/"
 
-    fetching_pricing: "Fetching pricing information..."
-    error_fetching_pricing: "There was an error fetching the pricing table."
+    fetching_pricing: "Chargement du tableau des forfaits..."
+    error_fetching_pricing: "Une erreur se produit avec le tableua des forfaits"
