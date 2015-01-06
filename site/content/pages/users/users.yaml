@@ -20,14 +20,14 @@ locale:
   fr:
     slug: "usersfr"
 
-    title: "Case Studies & Users"
-    short_title: "Our Users"
+    title: "Études de cas et utilisateurs"
+    short_title: "Nos utilisateurs"
 
-    tagline: "CommTrack in the field."
+    tagline: "CommTrack sur le terrain."
 
-    download_pdf: "Download PDF"
-    case_studies: "Case Studies"
+    download_pdf: "Telecharger PDF"
+    case_studies: "Études de cas"
 
-    cs_country: "Country"
-    cs_partners: "Partners"
-    cs_start_date: "Start Date"
+    cs_country: "Pays"
+    cs_partners: "Partenaires"
+    cs_start_date: "Date de début"
