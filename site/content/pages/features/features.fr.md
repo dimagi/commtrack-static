@@ -1,6 +1,6 @@
-# Features
+# Fonctionnalités
 
 {:.lead}
-CommTrack is an open-source turnkey product designed to strengthen logistics management through the use of mobile technology. 
+CommTrack est un produit d'accès libre et clé en main conçu afin de renforcer la gestion de la logistique grâce à l'utilisation de la technologie mobile.
 
-Its purpose is to support health workers and other mobile agents who manage commodities in low-resource settings. It has been proven at scale, through real-world deployments, to provide reliable, real-time, and actionable information to improve the performance of new and existing supply chains. CommTrack is integrated seamlessly with Dimagi’s suite of industry-leading tools for empowering the mobile workforce. 
+Sa finalité est d'appuyer les travailleurs mobiles et autres agents mobiles qui coordonnent des actions dans des milieux à ressources limitées. Dans le cadre de déploiements réels sur le terrain, il a fait ses preuves en matière d'informations fiables, en temps réel et utilisables permettant d'améliorer le rendement de chaînes d'approvisionnement, nouvelles et existantes. CommTrack est intégré de manière fluide à la série d'outils d'appui à la main-d’œuvre mobile de Dimagi, qui est à la fine pointe du marché.

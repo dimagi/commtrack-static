@@ -58,55 +58,55 @@ features: [
 locale:
   fr:
     slug: features
-    short_title: "Features"
+    short_title: "Fonctionnalités"
 
-    headline: "Logistics & More..."
-    tagline: "Support mobile workers with better stock tracking, requisition planning, and delivery acknowledgement using either SMS or a <a href=\"http://www.commcarehq.org/\">CommCare</a> application."
+    headline: "Logistique et plus..."
+    tagline: "Appuyer les travailleurs mobiles pour un meilleur suivi de l'inventaire, la planification des demandes et la reconnaissance des accouchements à l'aide de l'application SMS ou <a href=\"http://www.commcarehq.org/\">CommCare</a>."
 
     features: [
       {
-        title: "Stock Activity Monitoring",
+        title: "Suivi des activités d'inventaire",
         icon: 'logistics',
-        desc: "Capture logistics data including current stock, stockouts, receipts and disbursements"
+        desc: "Comprend les données de logistiques sont l'état actuel de l'inventaire, l'épuisement de la réserve, les reçus et les déboursements"
       },
       {
-        title: "Rich Reports and Graphs",
+        title: "Rapports et graphiques exceptionnels",
         icon: 'charts',
-        desc: "Hierarchical graphical and tabular reports on stock levels, reporting rates, and other indicators"
+        desc: "Rapports dotés de graphiques hiérarchiques et tableaux indiquant les niveaux d'inventaire, les taux de suivi et d'autres indicateurs"
       },
       {
-        title: "Requisitions and orders",
+        title: "Demandes et commandes",
         icon: 'checklist',
-        desc: "Track and approve requisitions, manage orders"
+        desc: "Faire le suivi et approuver les demandes, gérer les commandes"
       },
       {
-        title: "Automated Analysis",
+        title: "Analyse automatique",
         icon: 'analysis',
-        desc: "Automatic calculation of consumption, low stock, and overstock levels to draw meaning out of the numbers"
+        desc: "Calcul automatique des niveaux de consommation, de faible approvisionnement et de surplus d'inventaire permettant de comprendre les informations issues des chiffres"
       },
       {
-        title: "Non-Stock Indicators",
+        title: "Indicateurs autres que l'inventaire",
         icon: 'lightbulb',
-        desc: "Data on non-stock indicators can also be reported and aggregated e.g. number of cases treated"
+        desc: "Des données d'indicateurs autres que l'inventaire peuvent aussi être incluses dans le rapport et regroupées, comme par exemple le nombre de dossiers traités"
       },
       {
-        title: "Interoperability and Open APIs",
+        title: "Interopérabilité et APIs ouverts",
         icon: 'api',
-        desc: "Share data seamlessly with OpenLMIS, MoTeCH, and other systems in compliance with our Open APIs"
+        desc: "Partager des données facilement avec OpenLMIS, MoTeCH et d'autres systèmes en conformité avec nos APIs ouverts"
       },
       {
-        title: "SMS or Email Alerts & Reminders",
+        title: "Avertissements et rappels par SMS et courrier électronique",
         icon: 'alerts',
-        desc: "Send automated reminders or one-time broadcast messages. Generate automatic alerts on error conditions."
+        desc: "Envoyer des rappels automatiques ou des messages à diffusion unique. Générer des avertissements automatiques sur les conditions d'erreur."
       },
       {
-        title: "Turnkey, Cloud-Hosted Solution ",
+        title: "Solution clé en main hébergée en nuage ",
         icon: 'globe',
-        desc: "Costs associated with maintenance, new feature development, and hosting are distributed among dozens of organizations in over 25 countries. "
+        desc: "Les coûts associés à l'entretien, une nouvelle conception de fonctionnalité et l'hébergement sont distribués en une douzaine d'organisations issues de 25 pays.  "
       },
       {
-        title: "Flexible Reporting by SMS, Offline Phone Application, or Web Interface",
+        title: "Flexibilité de rapports par SMS, téléphonie hors ligne ou interface Web",
         icon: 'low_connectivity',
-        desc: "Stock reports can be submitted over SMS from any phone or through the CommCare mobile application, even with limited or intermittent connectivity."
+        desc: "Les rapports d'inventaire peuvent être soumis par SMS à partir de tout téléphone ou par le biais de l'application mobile CommCare, même en cas de connectivité limité ou intermittente."
       }
     ]

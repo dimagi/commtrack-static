@@ -75,72 +75,72 @@ contact_us_form:
 locale:
   fr:
     slug: accueil
-    title: "A tool for mobile logistics and supply chain management."
+    title: "Un outil pour logistique mobile et gestion de la chaîne d'approvisionnement."
     short_title: "Accueil"
 
     tour:
-      text: "Take a tour of CommTrack, with the following credentials"
-      start_tour: "Start Tour"
-      tour_commtrack: "Tour CommTrack"
+      text: "Faire une visite de CommTrack, avec les identifiants suivants"
+      start_tour: "Démarrer la visite"
+      tour_commtrack: "Visite CommTrack"
       credentials: [
         {
-          text: "Username",
+          text: "Nom d'utilisateur",
           value: "commtrack.tour@gmail.com"
         },
         {
-          text: "Password",
+          text: "Mot de passe",
           value: "tour"
         }
       ]
 
     why_commtrack:
-      text: "Why CommTrack?"
+      text: "Pourquoi utiliser CommTrack ?"
       reasons: [
         {
-          title: "Data-Driven Decision-Making",
+          title: "Processus décisionnel axé sur les données",
           icon: "icon-cloud",
-          desc: "Improved, real-time visibility into supply and demand indicators and improved transparency and accountability."
+          desc: "Visibilité en temps réel améliorée des indicateurs de l'offre et la demande et transparence et redevabilité améliorées"
         },
         {
-          title: "Streamline Requisitions and Delivery",
+          title: "Rationaliser les demandes et livraisons",
           icon: "icon-truck",
-          desc: "Address and resolve stockouts faster."
+          desc: "	Gérer et résoudre les problèmes d'épuisement de la réserve plus rapidement."
         },
         {
-          title: "Intelligent Forecasting",
+          title: "Prévisions intelligentes",
           icon: "icon-bar-chart",
-          desc: "Automatically infer consumption rates, resupply levels, and impending stockouts."
+          desc: "Déduire automatiquement les taux de consommation, les niveaux de réapprovisionnement et les épuisements de réserve imminents"
         },
         {
-          title: "Quality",
+          title: "Qualité",
           icon: "icon-trophy",
-          desc: "Improve stock management practice and storage conditions through targeted checklists."
+          desc: "Améliorer la pratique de gestion des inventaires et les conditions d'entreposage par le biais de listes de vérification ciblées."
         },
         {
-          title: "Reduced Losses and Expirations",
+          title: "Pertes et expiration des produits réduites",
           icon: "icon-money",
-          desc: "Improve tracking and accounting of resources, clients, and vendors."
+          desc: "Améliorer le suivi et la comptabilité des ressources, clients et fournisseurs."
         },
         {
-          title: "Demand Creation",
+          title: "La création de la demande",
           icon: "icon-picture",
-          desc: "Use images, audio, and video to engage audiences and deliver dynamic educational materials."
+          desc: "Utiliser des images et des fichiers audio et vidéo pour interagir avec le public ciblé et offrir du matériel éducatif dynamique."
         }
       ]
 
 
-    contact_us: "Contact Us"
+    contact_us: "Contactez-nous"
 
     contact_us_form:
-      title: "Contact CommTrack"
-      submit_button: "Contact Us"
+      title: "Contactez CommTrack"
+      submit_button: "Contactez-nous"
       required_fields:
-        first_name: "First Name"
-        last_name: "Last Name"
-        company: "Company"
-        email: "Email Address"
+        first_name: "Prénom"
+        last_name: "Nom"
+        company: "Compagnie"
+        email: "Courrier électronique"
       required_blob:
-        description: "What is your interest in CommTrack and any specific questions you have?"
+        description: "Quel intérêt accordez-vous à CommTrack et toute question spécifique que vous avez ?"
       optional_fields:
-        phone: "Phone Number"
-        00Nb0000002JJXA: "Country"
+        phone: "Numéro de téléphone"
+        00Nb0000002JJXA: "Pays"

@@ -16,10 +16,10 @@ locale:
     slug: services
     sections: ['pricing_table']
 
-    title:    'Services'
-    short_title: "Services"
-    heading:  'Discover CommTrack Support & Services.'
-    desc:     "Our field managers & analysts are here to help."
+    title:    'Les services'
+    short_title: "Les services"
+    heading:  "Découvrez l'aide et les services de CommTrack."
+    desc:     "Nos coordonnateurs de terrain et analystes sont là pour vous aider."
 
-    compare_button: "Compare Plans"
-    compare_heading: "Compare CommTrack Plans"
+    compare_button: "Comparez les forfaits de services"
+    compare_heading: "Comparez les forfaits de services CommTrack"

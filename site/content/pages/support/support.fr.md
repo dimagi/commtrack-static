@@ -1,47 +1,47 @@
-## For Users
+## Pour les utilisateurs
 
-- ### CommTrack-Users Group
+- ### Groupe « CommTrack-Utilisateurs »
   
-  Commtrack-users is a community-supported Google Group for questions related to using CommTrack. CommTrack users from all over the world ask questions and share information over the commtrack-users mailing list.
+  « CommTrack-users » est un groupe communautaire sur Google destiné à répondre aux questions liées à l'utilisation de CommTrack. Des utilisateurs de CommTrack issus des quatre coins du monde posent des questions et partagent des informations grâce à la liste d'envoi de CommTrack-users.
   
-  [Visit CommTrack-Users](http://groups.google.com/group/commtrack-users){: .btn}
+  [Visitez « CommTrack-users »](http://groups.google.com/group/commtrack-users){: .btn}
   
-- ### CommTrack Help Site
+- ### Site d'aide de CommTrack
   
-  The CommTrack Help Site is the main source of documentation for CommTrack tools.  Dimagi regularly updates the help site and encourages CommTrack project implementers to add their thoughts.
+  Le site d'aide de CommTrack constitue la source principale de documentation pour les outils de CommTrack. Dimagi met régulièrement à jour le site d'aide et encourage les exécutants de projets CommTrack à ajouter leurs idées.
   
-  [Visit the CommTrack Help Site](http://confluence.dimagi.com/display/commtrack){: .btn}
+  [Visitez le site d'aide de CommTrack](http://confluence.dimagi.com/display/commtrack){: .btn}
   
-- ### Contact Dimagi Directly
+- ### Contactez Dimagi directement
   
-  If you have questions about CommTrack plans or structure that's specifically related to your group or project, please contact Dimagi directly.
+  Si vous avez des questions à propos des forfaits ou structures de CommTrack liés particulièrement à votre groupe ou projet, veuillez contacter Dimagi directement.
   
-  [Contact Dimagi](http://www.dimagi.com/collaborate/contact-us/){: .btn}
+  [Contacter Dimagi](http://www.dimagi.com/collaborate/contact-us/){: .btn}
 
 
-### Additional Resources
+### Ressources supplémentaires
 
-To learn more about ICT for supply chain management in general, we recommend the following resources:
+Pour en savoir davantage sur ICT et la gestion de chaîne d'approvisionnement en général, nous vous suggérons les ressources suivantes :
 
 - [IAPHL](http://iaphl.org/)  
-  The International Association of Public Health Logisticians.
+  L'International Association of Public Health Logisticians.
 - [E-Drug](http://www.essentialdrugs.org/edrug/)  
-  DRUG is used by health care professionals, researchers and policy makers to obtain and discuss current information on essential drugs, policy, program activities, education and training.
-- [Lessons Learned](/static-resources/docs/LMIS/Lessons_Learned.pdf)
-  This report is a summary of Dimagi experiences working on a variety of open-source ICTs for supply chains (ICT4SC) in low-resource settings from light mobile applications to simple information systems.
+  DRUG est utilisé par les professionnels de soins de santé, les chercheurs et les décideurs politiques afin d'obtenir et de discuter des informations actuelles concernant les médicaments, les politiques, les activités de programme, l'éducation et la formation.
+- [Les leçons apprises](/static-resources/docs/LMIS/Lessons_Learned.pdf)
+  •	Ce rapport constitue un résumé des expériences de Dimagi dans le cadre de son travail avec une gamme variée de ICTs d'accès libre pour les chaînes d'approvisionnement (ICT4SC) de milieux à ressources limitées, d'applications mobiles légères en passant par des systèmes d'informations simples.
 
 
-## For Developers
+## Pour les développeurs
 
-- ### CommTrack Server Source
+- ### Source de serveur CommTrack
 
-  Licensed under BSD- Source code for CommTrack
+  Enregistré sous BSD - code source pour CommTrack
 
-  [CommTrack Server Source Page](https://github.com/dimagi/commcare-hq/tree/master/corehq/apps/commtrack){: .button}
+  [Page source de serveur CommTrack](https://github.com/dimagi/commcare-hq/tree/master/corehq/apps/commtrack){: .button}
 
 
-- ### CommTrack Client Source
+- ### Source client CommTrack
 
-  Licensed under APL v2- Source code for the CommTrack Mobile Client
+  Enregistré sous APL v2 - code source pour les clients de CommTrack mobile
 
-  [CommTrack Client Source Page](https://bitbucket.org/commcare/commcare/){: .button}
+  [Page de source client CommTrack](https://bitbucket.org/commcare/commcare/){: .button}
