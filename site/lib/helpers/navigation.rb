@@ -64,7 +64,7 @@ module Nanoc3::Helpers
           prefix = ""
         end
         filename = item[:meta_filename]
-        parent_id = filename.split('/')[0..-2].join('/')
+        parent_id = filename.split('/')[1..-2].join('/')
         page = @items.find { |i| i.identifier == "/#{loc}/#{parent_id}/" }
         return get_page_url(page)
       end
